@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>瑞联集团发票抬头信息管理</title>
+		<link type=image/x-icon rel="shortcut icon"
+			href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAALy98wB4ds0UdXTQjJSS4SGGhN13pqbkXYqJ3UJ7e9o1jIvhM2tp1z91dNkty9DoAQAAAAAAAAAAAAAAAAAAAAC7vfMBfX3mU0pI2baIh+eFbWzg95aU6b57euLgiorj04aE5dJmZd72a2vgzLa38SEAAAAAAAAAAAAAAAAAAAAAxcX2AYiH8ZRQT+7xmJb0j3Nx8q6WlfOXhITug56e+LiPjfB3hoXxvIOC8ba0tfIcAAAAAAAAAAAAAAAAAAAAAM/O/ACIh/0zfHv+jqaj/BulpfE4q7DBkaCkrqKkptpX0dH/DMbE/y6zs/8tvr/rAAAAAAAAAAAAAAAAAN/f3wDW2NwA4uDgH8TEzz/L0NFhzNLSyaiws++Tm57vpq2t1rm9v2TKy8oxw7+7GsvLzQC2trcAAAAAAAAAAADg3+Ad2NrdW9fW1b60tLT3t7u+/aivs/+UmZvamJyewYyTlvWorrP8wsXH6tXV1bLNzM1AsrGyCgAAAAAAAAAA1dXWOtHT1Nq6urv/mZqb/6Omqv+JjpH+mJ2d7q2ysuSFi4/4mZ+i/7G2uf/Fx8n/0tPU18bIykEAAAAAAAAAAJaUmBKoqKpvq6yukZmdnvKKkJT+h46b9H9/ouF2dpjZhIqZ+ISKj/uPlJf9rK6w5MnJydHPz89LAAAAAAAAAAAAAAAAd3l7CKusrJ+doqX8aXC6+Uhe2vdDbt74Qm7c90di1vdZYsPyipSh/aCkpcakpaQb0tHQBgAAAAAAAAAAWFRaALm+vhamp6XPm6Gn90ti1+Q3XuP/Q4LY/0OA2P9Cat7/P1zj8YmXtOueoaDhdnh3RNDQzwAAAAAAAAAAAAAAAACjpaU5q6mq3ZKqtPNOmt7uQ4Hb/1Kh1f9WpNf/SoTb/0qT4/qBscbkmJqc84eHh3MAAAAAAAAAAAAAAAAAAAAAlZSTHqOiotJ3rsH9NnXm/y8+6P9Bd+T/RHvk/y9C6P8yWuj/YK3P+5yipeyDgYJaAAAAAAAAAAAAAAAAAAAAAJaDgAKMjYuTaaO3/zBk5P8wL+j/PETk/z5F4/8yNub/Lkvp/0+gyv+KkpPAmpOSEQAAAAAAAAAAAAAAAAAAAACdqawAm6WfFnSruLFDhNv/O0Tf/0dY4/9LW+T/PEXi/z1v3/9kpMHnj5aVVciLfgEAAAAAAAAAAAAAAAAAAAAAAAAAAIifxQCe1uEtbL3fzEZ4z/5Nac7/T2jS/0Rn0v9Zq9vsd7XGZ52xrgO2f3MAAAAAAAAAAAAAAAAAAAAAAAAAAAD/0QAA6e3/BIfY6D2Bx93Dbq/X/2Sq1v9uuNjib8ffZGnt/waWpKIAAAAAAAAAAAAAAAAA4AMAAMADAADAAwAAwAcAAOAHAACAAQAAgAEAAIABAACAAQAAwAMAAMADAADAAwAAwAMAAOADAADwBwAA8A8AAA==">
+
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+			}
+
+			h1 {
+				text-align: center;
+			}
+
+			h2 {
+				text-align: center;
+			}
+
+			h3 {
+				text-align: center;
+			}
+
+			h4 {
+				text-align: center;
+			}
+
+			h5 {
+				text-align: center;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: none;
+			}
+
+			table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+
+			th,
+			td {
+				padding: 10px;
+				border: 1px solid #ddd;
+			}
+
+			th {
+				background-color: #808080;
+				color: white;
+			}
+
+			#addButton {
+				padding: 10px 20px;
+				background-color: #008CBA;
+				color: white;
+				border: none;
+				cursor: pointer;
+				margin-top: 20px;
+			}
+
+			#qrCodeContainer {
+				text-align: center;
+				margin-top: 20px;
+			}
+		</style>
+
+		<!-- /* css跳动的文字动画 */ -->
+		<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<style>
+			.nav_li_pb {
+				font-size: 18px;
+				color: #ef9208;
+			}
+
+			.nav_li_pb i {
+				font-style: normal;
+			}
+
+			.nav_li_pb i {
+				display: inline-block;
+				vertical-align: bottom;
+				-webkit-animation-name: fontSizeUp1;
+				animation-name: fontSizeUp1;
+				-webkit-animation-duration: 5s;
+				animation-duration: 5s;
+				-webkit-animation-timing-function: steps(1, end);
+				animation-timing-function: steps(1, end);
+				-webkit-animation-fill-mode: none;
+				animation-fill-mode: none;
+				-webkit-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+				-webkit-transform-origin: 50% 75%;
+				transform-origin: 50% 75%;
+			}
+
+			.nav_li_pb i:nth-of-type(1) {
+				-webkit-animation-delay: 0s;
+				animation-delay: 0s;
+			}
+
+			.nav_li_pb i:nth-of-type(2) {
+				-webkit-animation-delay: 0.5s;
+				animation-delay: 0.5s;
+			}
+
+			.nav_li_pb i:nth-of-type(3) {
+				-webkit-animation-delay: 1s;
+				animation-delay: 1s;
+			}
+
+			.nav_li_pb i:nth-of-type(4) {
+				-webkit-animation-delay: 1.5s;
+				animation-delay: 1.5s;
+			}
+
+			.nav_li_pb i:nth-of-type(5) {
+				-webkit-animation-delay: 2s;
+				animation-delay: 2s;
+			}
+
+			.nav_li_pb i:nth-of-type(6) {
+				-webkit-animation-delay: 2.5s;
+				animation-delay: 2.5s;
+			}
+
+			.nav_li_pb i:nth-of-type(7) {
+				-webkit-animation-delay: 3s;
+				animation-delay: 3s;
+			}
+
+			.nav_li_pb i:nth-of-type(8) {
+				-webkit-animation-delay: 3.5s;
+				animation-delay: 3.5s;
+			}
+
+			.nav_li_pb i:nth-of-type(9) {
+				-webkit-animation-delay: 4s;
+				animation-delay: 4s;
+			}
+
+			.nav_li_pb i:nth-of-type(10) {
+				-webkit-animation-delay: 4.5s;
+				animation-delay: 4.5s;
+			}
+
+			.nav_li_pb i:nth-of-type(11) {
+				-webkit-animation-delay: 5s;
+				animation-delay: 5s;
+			}
+
+			.nav_li_pb i:nth-of-type(12) {
+				-webkit-animation-delay: 5.5s;
+				animation-delay: 5.5s;
+			}
+
+			@-webkit-keyframes fontSizeUp1 {
+				0% {
+					-webkit-transform: scale(1.25);
+					transform: scale(1.25);
+				}
+
+				7%,
+				100% {
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+			}
+
+			@keyframes fontSizeUp1 {
+				0% {
+					-webkit-transform: scale(1.25);
+					transform: scale(1.25);
+				}
+
+				7%,
+				100% {
+					-webkit-transform: scale(1);
+					transform: scale(1);
+				}
+			}
+
+			.nav_li_pb .fontSizeUp1 {
+				-webkit-animation-name: fontSizeUp1;
+				animation-name: fontSizeUp1;
+			}
+		</style>
+
+		<style>
+			.footer {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 30px;
+				line-height: 30px;
+				background: #7F2E49;
+				text-align: center;
+				color: white;
+				font-size: 14px;
+				font-weight: 600;
+			}
+		</style> <!-- /* 底部固定框 */ -->
+
+		<!-- /* 使用javascript中Date对象创建获取时间,使用一个div标签来显示获取当前时间的值 */ -->
+		<script type="text/javascript">
+			window.onload = function() {
+				window.requestAnimationFrame(getDate)
+			}
+
+			function getDate() {
+				window.setTimeout(function() {
+					window.requestAnimationFrame(getDate)
+				}, 1000 / 2)
+				var d = new Date();
+				var year = d.getFullYear() //获取年	
+				var month = d.getMonth() + 1; //获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1	
+				var day = d.getDay() //获取日	
+				var days = d.getDate() //获取日期	
+				var hour = d.getHours() //获取小时	
+				var minute = d.getMinutes() //获取分钟	
+				var second = d.getSeconds() //获取秒	
+				if (month < 10) month = "0" + month
+				if (days < 10) days = "0" + days
+				if (hour < 10) hour = "0" + hour
+				if (minute < 10) minute = "0" + minute
+				if (second < 10) second = "0" + second
+				var week = new Array("周日", "周一", "周二", "周三", "周四", "周五", "周六")
+				var Tools = document.getElementById("Main")
+				var da = year + "/" + month + "/" + days + "&nbsp;" + week[day] + " <br>北京时间 " + hour + ":" + minute + ":" +
+					second
+				Tools.innerHTML = da
+			}
+		</script> <!-- /* 使用javascript中Date对象创建获取时间,使用一个div标签来显示获取当前时间的值 */ -->
+	</head>
+
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th style="text-align: center;background-color: #ffffff;">
+						<a target="_blank" style="color:#4CAF50;text-decoration:none;"
+							href="https://www.reliancejk.com/" title="瑞联集团 -- 瑞联官网">
+							<img style="text-align:center;width:144px;height:26px;"
+								src="https://www.reliancejk.com/templates/specialty/images/logo-144-26.png" />
+						</a>
+						<br>
+						<!-- <td style="color:#990066;font-size:28px;text-decoration:none;"> </td> 
+						<b>服务热线:</b>-->
+						<p><img src="data:image/svg+xml;base64,PHN2ZyAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMzg0IDUxMiI+DQogICAgPHBhdGggZD0iTTk3LjMzMyA1MDYuOTY2Yy0xMjkuODc0LTEyOS44NzQtMTI5LjY4MS0zNDAuMjUyIDAtNDY5LjkzMyA1LjY5OC01LjY5OCAxNC41MjctNi42MzIgMjEuMjYzLTIuNDIybDY0LjgxNyA0MC41MTNhMTcuMTg3IDE3LjE4NyAwIDAgMSA2Ljg0OSAyMC45NThsLTMyLjQwOCA4MS4wMjFhMTcuMTg4IDE3LjE4OCAwIDAgMS0xNy42NjkgMTAuNzE5bC01NS44MS01LjU4Yy0yMS4wNTEgNTguMjYxLTIwLjYxMiAxMjIuNDcxIDAgMTc5LjUxNWw1NS44MTEtNS41ODFhMTcuMTg4IDE3LjE4OCAwIDAgMSAxNy42NjkgMTAuNzE5bDMyLjQwOCA4MS4wMjJhMTcuMTg4IDE3LjE4OCAwIDAgMS02Ljg0OSAyMC45NThsLTY0LjgxNyA0MC41MTNhMTcuMTkgMTcuMTkgMCAwIDEtMjEuMjY0LTIuNDIyek0yNDcuMTI2IDk1LjQ3M2MxMS44MzIgMjAuMDQ3IDExLjgzMiA0NS4wMDggMCA2NS4wNTUtMy45NSA2LjY5My0xMy4xMDggNy45NTktMTguNzE4IDIuNTgxbC01Ljk3NS01LjcyNmMtMy45MTEtMy43NDgtNC43OTMtOS42MjItMi4yNjEtMTQuNDFhMzIuMDYzIDMyLjA2MyAwIDAgMCAwLTI5Ljk0NWMtMi41MzMtNC43ODgtMS42NS0xMC42NjIgMi4yNjEtMTQuNDFsNS45NzUtNS43MjZjNS42MS01LjM3OCAxNC43NjgtNC4xMTIgMTguNzE4IDIuNTgxem05MS43ODctOTEuMTg3YzYwLjE0IDcxLjYwNCA2MC4wOTIgMTc1Ljg4MiAwIDI0Ny40MjgtNC40NzQgNS4zMjctMTIuNTMgNS43NDYtMTcuNTUyLjkzM2wtNS43OTgtNS41NTdjLTQuNTYtNC4zNzEtNC45NzctMTEuNTI5LS45My0xNi4zNzkgNDkuNjg3LTU5LjUzOCA0OS42NDYtMTQ1LjkzMyAwLTIwNS40MjItNC4wNDctNC44NS0zLjYzMS0xMi4wMDguOTMtMTYuMzc5bDUuNzk4LTUuNTU3YzUuMDIyLTQuODEzIDEzLjA3OC00LjM5NCAxNy41NTIuOTMzem0tNDUuOTcyIDQ0Ljk0MWMzNi4wNSA0Ni4zMjIgMzYuMTA4IDExMS4xNDkgMCAxNTcuNTQ2LTQuMzkgNS42NDEtMTIuNjk3IDYuMjUxLTE3Ljg1NiAxLjMwNGwtNS44MTgtNS41NzljLTQuNC00LjIxOS00Ljk5OC0xMS4wOTUtMS4yODUtMTUuOTMxIDI2LjUzNi0zNC41NjQgMjYuNTM0LTgyLjU3MiAwLTExNy4xMzQtMy43MTMtNC44MzYtMy4xMTUtMTEuNzExIDEuMjg1LTE1LjkzMWw1LjgxOC01LjU3OWM1LjE1OS00Ljk0NyAxMy40NjYtNC4zMzcgMTcuODU2IDEuMzA0eiI+PC9wYXRoPg0KICA8L3N2Zz4="
+								style="vertical-align:text-bottom;width: 20px; height: 20px;" />
+
+							<strong>
+								<a style="color:#990066;font-size:22px;text-decoration:none;">
+									<s><i>4</i><i>0</i><i>0</i>-<i>1</i><i>5</i><i>8</i>-<i>3</i><i>3</i><i>3</i><i>1</i></s></a>
+								<br>
+								<a target="_blank" class="nav_li_pb"
+									style="color:#990066;font-size:22px;text-decoration:none;">
+									<i>0</i><i>5</i><i>7</i><i>3</i>-<i>8</i><i>3</i><i>3</i><i>8</i>-<i>8</i><i>8</i><i>9</i><i>9</i>
+								</a>
+							</strong>
+						<p>
+					</th>
+					<th style="background-color: #ffffff;">
+						<font color="#86204A">
+							<h1>公司 | 发票抬头 · 信息一览表</h1>
+					</th>
+					<th style="background-color: #ffffff;">
+						<h3>
+							<div id="qrCodeContainer">
+								<a target="_blank" href="https://www.reliancejk.com/abouts/info/"
+									title="瑞联集团 | 公司发票抬头信息管理">
+									<img style="width:80px;height:80px;"
+										src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAACAvzbMAAAAAXNSR0IArs4c6QAAIABJREFUeF7t3e16W8euA+D2/i+653HT7H4cR+uFRXq8ZPRvKBAAOQOPkjS///HHH3/81v/qQB2oA3WgDoQO/N4ACR1reR2oA3WgDvzpQAOki1AH6kAdqAMfcqAB8iHb+qE6UAfqQB1ogHQH6kAdqAN14EMONEA+ZFs/VAfqQB2oAw2Q7kAdqAN1oA58yIEGyIds64fqQB2oA3WgAdIdqAN1oA7UgQ850AD5kG39UB2oA3WgDjRAugN1oA7UgTrwIQeiAPn9998/1OS7fGj6/wqjfk/3fZuX9t6YrepRjoqXaDnZW3negaNqma5Tb6b73gVPz0wDZHCiarq21CWf7tsAuZ7Qydlcs/tRcQeOqmW6Tr2Z7nsXPL1TGiCDE1XTtaUu+XTf5PJRLUmd6rmDP6ol8UdrT/qjHE/VqTen+J3uq3vbABmclJquLXXJp/s2QK4ndHI21+z6ArnySOd3hfOqv653SgNkcAPUdG2pSz7dtwFyPaGTs7lm1wC58kjnd4Xzqr+ud0oDZHAD1HRtqUs+3bcBcj2hk7O5ZtcAufJI53eF86q/rndKA2RwA9R0balLPt23AXI9oZOzuWbXALnySOd3hfOqv653SgNkcAPUdG2pSz7dtwFyPaGTs7lm1wC58kjnd4Xzqr+ud0oDZHAD1HRtqUs+3bcBcj2hk7O5ZtcAufJI53eF86q/rndKA2RwA9R0balLPt23AXI9oZOzuWbXALnySOd3hfOqv653ykqAaPM7mJ8s2indJzlq71PeJDumWt4wVY9iKl6iR2uVo+IldapbOU7jJbNOdJ+qHffxD3X8m/7NVjX85KKd5Ki9gzU7dbb4b24ns76DP8pxYzC6F8pxGi+Z9YY/05jjPjZAHo9IDT+5aCc5am892NMHJsFTLcmsFfOkP8ox8VJrVbdynMZLZq2aT9aN+9gAaYA8s9DTC/kMl2c/q1qSS0Ux9eJ7VuN7n1eOG71Vt3KcxktmveHPNOa4jw2QBsgzSzq9kM9wefazqiW5VBRTL75nNTZAfjigc0lmvTGbaUzVrfvY30S/mJAafnLRTnLU3rqQ0wcmwVMtyawV86Q/yjHxUmtVt3KcxktmrZpP1o372BdIXyDPLPT0Qj7D5dnPqpbkUlFMvfie1dgXSF8gskO6j32B9AUi+/TLmjtckCpQtTRA1NHrOr6o8B+zm8ZLZn2t9nyF7jj72BdIXyDPrPX0Qj7D5dnPqpbkUlFMPbDPauwLpC8Q2SHdx75A+gKRfeoL5D8O8AEb/sn5qWH94sMachu9T/mYaFaOG/5MY6pu1Xw0QFTMtIkbP0EmmNN6NnzkBTp4QU7rVs3J/KY5Jr2n9ZzUorpVc6JlA1P1aN00R8Y7+RVWMkQ1UuvYILwgGyCPnVe/dX5vddP7cweOiT/Teqb9TrRorWpOtGxgqh6tm+bIeA2QxyPaWDRdCq1LOComLxAGrOIpvwbItVPTnm/s2bWKrEI1J1o2MDNV19XTHBmvAdIAec8BXqAGyMMFSi6q62siq9AZKupJLcpRNSdaNjBVj9ZNc2S8BkgDpAHywwE9NHqoN15JSe9pPcmlm/CcrFXNiZYNzEnNye6qbtbcAGmANEAaIHKh6eUjWFs1fPHhy3njct7QPq2b8RogDZAGSANELrUGyNxdIX4nNXzhY3AyXgNkbinU9GQxpHbjYKsW7a14ovdnjfZWzDtwVC3JT86KOe239k3qdIaJlg3MRJPUTnNkvAZIA6QvkL5A5JJKLl3B26jhiw9/Ek+C+KQ/07oZrwHSAGmANEDkMj95QQq/rcueL9MglFSP1k1zZLwGSAOkAdIAkYuqATJ3V4jfSQ1f+BhyjNcAmVsKNT1ZDKlNDrZyTDCF40bNtBbF29By0m/VrRwVb8NHxVQtW68a5al16rnqZrwGSAPkPQd00XTBN+p4yYd/6trQctLvV/JRZ5P4Pe2PckzqpjkyXgOkAdIA2fsKSy+B5EJTTK3jy+IGQayaE7+n/VGOSd00R8ZrgDRAGiANELms9NLVy0d6btWoln6FdXE/NkAaIA2QBohc1HrpNkDEzdka9Xx6hv33QC7mqIYnP6nMrk72vzWfXrRpLQnetBbFSzhqbbJniql1qls5Kp7y26hTLcm5TjCnNannypHx+gLpC6QvkL5A5EKbvnyk51aNammA9Cusdx3ghMXfOEwWbfpQvNphUH+mZ6h4yi+pS2aY4Eqt6laOiifctmpUS3KuE8xpXeq5cmS8vkD6AukLpC8QudCmLx/puVWjWhogfYH0BfIPB/gni+DltXXIr3CntSjeFa+P/HpyoX0E/9FnVLdyVLxpHQmeammANEC+XIDo8t7hIOqhVc3Jgd3orZh3qNP90dlM4yUeam/FVM3JPiaYylPr1B/lyHj9Cuvzv8KaHqIu2ck61ZwcWNWT9FbMO9TxJYCvzWm8xEPtrZjJTmjvBFN5at00R8ZrgDRAdEmfqUsOly6v8kl6K+Yd6tRH9WcaL/FQeyumak5+oEkwlafWqT/KkfEaIA0QXdJn6nRxkwOrfJLeinmHOr4E+gJ5OM5pHzd2Z5oj4zVAGiAbC/1fzOQS1+VV3klvxbxDnfqo/kzjJR5qb8VUzckPNAmm8tQ69Uc5Ml4DpAGiS/pMnS5ucmCVT9JbMe9Qx5dAXyB9gfzHAd6dBkgD5DMuw+QS1+VV3klvxbxDnfqo/kzjJR5qb8VUzckPNAmm8tQ69Uc5Ml4DpAGiS/pMnS5ucmCVT9JbMe9Qx5dAXyB9gfQFkh3p6cOVXHx6oSnHTPmZatWc+KhKkt6KeYc63R/1Zxov8VB7K6ZqTvYxwVSeWqf+KEfG6wukLxBd0mfqdHGTA6t8kt6KeYc6vgT6AukL5I4vkDscwuTy0QN7UrfqUS2Kt6FZOWrvDS3THFXLW53qUY7TeImW6VrVsvEDzbSWBE91806cfIEkwk/VquF3WTTVwwuEP71uzE85am/1RvFO74TqUR+n8RIfp2tVy+kZntLNO9EA+fyvsKaXIsHTg8ML1AAZ+fojmaHWnpq17o7q2KhTbxogF/djA6QB8p4DegkkB3H6IlCO2ndDyzRH1dKvsL7Xuda90B3XvT36T9qq6JN1avhdflJRPbxAfYH0BfIfB3R3eq4/34Hx898XyPf6SWV8gRogDZAGyOcnwQc7jp//BkgDpF9h/XBAD1dydk/+NK56lOM0XuLjdK1qucs3C+qP6uadaIA0QBogDRC5gKYvH+m5VaNaGiAX92MDpAHSAGmAyEWtl67+9Co9t2pUSwOkAfLUDr7aoqkevQQU76kh/OLDylF7b2iZ5qhakq/klKP6o3iJlula1dIAORAg08O+C54eHF3eabzkMJTj462bns00Xmc9983CXe6fSZ68jxtfYU0KuRMWm45/cmkar5fK3KUyPZtpvM56btZ3uoOmuPI+NkCmLP/tNza9AfLQ9Pr4a3v0ZdgAaYA8c7PxGWyAPGPzvz/LpjdAGiD/cWB6dxogDZBnbjbexwbIMzY3QHjRMDR78c1dfNOzmca7y6znboj7IPGsGyBzQ2XT8TKdxrvLgZ3WPY1XH79XyM3dEPdB4jPTAJkbKpveAOlXWP0K608H7nBm5m6I+yDxXBogc0Nl0xsgDZAGSANk7uoZR+K7rAEy5z2b3gBpgDRAGiBzV884Et9lDZA579n0BkgDpAHSAJm7esaR+C5rgMx5z6Y3QBogDZAGyNzVM47Ed1kSIOMsvylg8pfBxCIdtmD9rJnmmPRWPcpxGu9NywZm4pHUTnNUPOG2tWcbHBM93602+hcJv5s5W3r14tP+G4dmmqNq2bic1Z9E8wZm4pHUTnNUPOHWAElc+rq1DZADs0kuKqF3h4MtOn7WqB71cRpvI+QSf7R2WrfiKb+3Op2hYm5w1N7fsa4BcmDqdzg00xwTm/USUI7TeA2QZJqPa3WG2lFnrXitu5hffw/k81fkDodmmmPisl4CynEarwGSTLMBMufW10PqC+TATPTiU2p6QSrexlcLSW/Voz5O4zVAkmk2QObc+npIDZADM9GLT6npBal4DZBrp9Tz6VlfM/u7Ypqj4iUcp/3Z4Jjo+W61DZADE7/DoZnmmNisl4BynMbrCySZZl8gc259PaQGyIGZ6MWn1PSCVLy+QK6dUs+nZ33NrC+QxKPWPudAA+Q5/z706elLRS+zhOw0x6S36lGO03h9gSTT7Atkzq2vh3Q0QPQCSGzTy0IxNzhqb61LNJ/Sk3BU3dN1iTfTerR30lcxp328A8dEs+pRvxUv4XiqtgFy4bwuxakBJj8Nn/xq6g6HJpn1tB7tnfRVzOndvQPHRLPqUb8VL+F4qrYB0gD5lN27w6HRCyANbTFYeyc+KqbwS2ruwHFDj/qd+JPwPFHbAGmAfMre3eHQ6AXQAHm8MsmsE88/ZVHfaaJ6VIvindKb9G2ANECSfflw7R0OjV4ADZAGyHsO6P7c4SzoQW+ANEB0V56qu8Oh0QugAdIAaYD8cKAB0gB5Khj0ww2Qx05peCU+KqbOUOvuwFG1JD8sqN+JPwnPE7UNkAbIp+zdHQ6NXgDJpaLmau/ER8VUjlp3B46qJZm1+p34k/A8UdsAaYB8yt7d4dDoBZBcKmqu9k58VEzlqHV34Khaklmr34k/Cc8TtQ2QBsin7N0dDo1eAMmlouZq78RHxVSOWncHjqolmbX6nfiT8DxRGwXISYOme0/jvQ1vA1OWQvve5TConpMHcZrjNF6yj7Jj37nm1J7pTiTnenqODZALR5Pl0YEnmDJw7ZssmmJOa0kuvo3e4vcGxw2/FVM1f9e6U3uWzO8Yx+RfJFRBG2Kme0/jbVwqemBVSwNEHb2uU8/1LEzjJft4rfZ7V+gMp13SnUjO9TjHBshjS5Pl0YEnmDJw7ZssmmJOa0kuvo3e4vcGxw2/FVM1f9e6U3uWzO8YxwZIA+Q9B3R5Nxb3ZG+9JKc5TuMlIaeav2vdxo6Ll7oTyQ+G0jep6e+BXLiVLI8OPMGUYWrfZNEUc1pLcvFt9Ba/Nzhu+K2Yqvm71p3as2R+xzj2BdIXSF8g+dWoh1sP9jReEnK5+u/1CZ3htCu6E8kPhuMcGyANkAZIfqz0cOvlM43XAMln+qtP6AznOv5A0p1ogIDzaqYOexovGbhyBFvWFm3Dn2k90z4qv41Zb/itmInu71h7as+S+R3j2BdIXyB9geTXoh5uPdjTeEnI5eq/1yd0htOu6E7c5gWiBiXCFVOHqL2n8VTHRp1qOXmpJBzVo+lZa9+NupNatLfqTmatvRVzGu/kmVG/kzr1UTGjP4XFoL//rqVcp8KnF0jxWMhCoXpz8jAkHNUinc1Gb+WodSe1aG/VkvitvRVzGu/kmVG/kzr1UTEbIBdO6UKq4Rt1yVKc0pNwVI9Uy0Zv5ah1J7Vob9WS+K29FXMarwHyeOoNkAaI3gtP1ekFkDTZuCyS/pO1J7Vob9WbzFp7K+Y0XgOkAfKuA9MLqYdro061nDwMCUf1aOOy0N7TdSe1aG/VnMxaeyvmNN7JM6N+J3Xqo2L2BdIXiO7KU3XTi5sc7I3eT5nxzoc3Lj7lqL0VL/FbeyvmNF6yZ+rPyTr1UTk2QBoguitP1U0vbnKwN3o/ZUYD5H8OTF/403jJnk3vxAbe9FlogDRANvb0/2FOL25ysDd6T5u2cfEpR+2teInf2lsxp/GSPVN/Ttapj8qxAdIA0V15qm56cZODvdH7KTP6AukLZHqBEG/6LDRAGiC4es+VTS9uA+S5efzz0/pTu3ZMZq29FXMaL9kz9edknfqoHBsgDRDdlafqphc3OdgbvZ8yoy+QvkCmFwjxps/C0QCZFpNcKuj3byc5am/9qUs1v9Vpb8VMOGrvBFN4al/B+llzkqP2Vt2Kl/ijtcpR8ZI61T3NUfsmWsY5Jv8zRSWqwqfFNEB0Qtd107PRnUjCK8G8Vjwfmqf3Uf3RWSueeJ3WKMcUV+pV9zRH7SsaftaMc2yAPLZ/2vDkUtHet1i04P+Pdkq39k0O7PRsEo7aWzEVL/FHa5Wj4iV1qnuao/ZNtIxzbIA0QN5zYHzRGiDJOf9lbTIXvYAUU/FGhP4HRDlu9Fbd0xy1b6J5nGMDpAHSAPnhwPThSl6begkkHPUCUkzFUy1JnXJMMLVWdU9z1L6qY2PH+5voF+5PL0VyqWjvWyxaXyDJOe8LpC+Q6J+01eXSO0XxGiANkHcdGF+0BoieyYd1yVz0BwvFVLwRoQ2QBsjVIuniXuH889enl/wkR+09rXnlqdsASda4L5AGSAPk6sToBXmF0wA59y9A6mySkNO9SDCFp/YVrJ81Jzlqb9WteIk/WqscFS+pU93THLVvomWcY38T/bH904b390Cu1109nz5g2vdawd8VJzlqb9WteIk/WqscFS+pU93THLVvomWc40aAqKDEIBWumNN4qjmpO8lReyd6tHZ6htN9Fe+tTn3c0DyNqXgn/Ul6a+30DLXvRp1q0d4rv4nOzQ9+L65Gbhwa9eckR+2tWpI69Xyao/ZNtChH7a14r/bSVX+S2Witen6S47QWxWuAXDh1cilOLq721kVL6tTzaY7aN9GiHLW34jVAkik9rlXPdYZzzHIk1aLIDZAGyLsOTC+aLuTGxae9Ny4A9VF7K96Gj8pR/X6rUz0bvZXnHThOa1G8BkgDpAHylwMbl9T05aN4DRC9Aq/r1PON/blml1WoFkVtgDRAGiANELovNi5IvdA2epPom7ySprUoXgOkAdIAaYDQfbFxiTdAyPqxIvVbGzZAGiANkAYI3RcNkMc2bfhDgwmKGiBDF74aeXIpTnLU3sHucql6Ps1R+7KQha8/Es2qRzEV76Q/SW+tPemPctQ61aJ4fYEMBZIantTpsE8e7ESP1qoe9We6r+K91SnHDc3TmIp30p+kt9ZOz1D7btSpFu29EiC6aNNiVPTpOvXnNM+v3n96f15tLqf8SfpOe669p/smZ+WlOG78r0x0OGpkMpw71Ko/d9BykuP0/rzaXE75k/Sd9lx7T/dNzsFLcWyAJKOfqT25vDMKvgaKHkRl+2pzOeVP0nfac+093Vd3bONrzaS31rKPDRC1dK7u5PLOqTiPpEuuTF9tLqf8SfpOe669p/vqjjVAwCkdjg4bWt6qRP25lagDZKf359XmcsqfpO+059p7um+y/i/FsS+QZPQztSeXd0bB10DRg6hsX20up/xJ+k57rr2n++qO9QUCTulwdNjQ8lYl6s+tRB0gO70/rzaXU/4kfac9197TfZP1fymOfYEko5+pPbm8Mwq+BooeRGX7anM55U/Sd9pz7T3dV3esLxBwSoejw4aWtypRf24l6gDZ6f15tbmc8ifpO+259p7um6z/S3HsCyQZ/UztyeWdUfA1UPQgKttXm8spf5K+055r7+m+umN9gSRODdbqwHWBlJr2VbykblpL0lt1vxJH1Zz4qP5ob8V746iYqkd7J32nMRVPNd/FR9Uz7c/K/8pExSR1upTjBgX/bnuiR2qntUjPnzWn/D7JUTUnHHWG2lvx7nLxqZ4Nf3SO2lvxpjVr3+T1o5gNkAunppdHB7Mx7KS36tbDkPTW2mmOiqf8khlq78RvxVQ92jvpO42peKr5LkGseqb9aYA0QN51QC+B6YXUg5AcbOWomhOO070VL/FH9WjvxMdpTMVTzXfxUfVM+9MAaYA0QP5yILn4pg+s9k4uAMU8peX0C01138FH1ZLsj2A2QBogDZAGiNwV4/+2SQPkse3TwZX4TQvx9gc1Nv4YrzZP6tTM8YTtb6I/HNO03yd3Qncs4aj+aG/Fu8tXL6pnwx+do/ZWvGnN2rcBAk7pcADqz5Lp5dG+G8NOeqvuab9PclTNCUf1R3sr3sbuam/Vkuy4YirHZIbaWzGV43TfxG/V0hfIhVMbQ9Th6KIpXlKnul+Jo2pOfFR/tLfiNUCSKT2u1dloR53hdN8GCExIhwNQfYGASdN+Q8v/legBU46Kl3Cc7q14DZBkSg2Qj7rVF0hfIO86oJdpcqF9dEl/9blpjoqX6FB/tLfiNUCSKTVAPupWFCC65EomOQyKqXWqZYPjyd7f0Z9X8lvnt1F38ixM69nQMs1xA2/6LDRALqa0sWjTQ7zDoiUcp/2Zxku0aK1yVLyNupNnYVrPhpZpjht4umfqTwOkAfLlvsIaX3L8o9h6aE4e7I3eirnhj85aOWrdhhbtfbJO/VZ/GiANkAbIXw7oodm4APRgb/RWzA1/Tune0KI+nqxTv9WfBkgDpAHSAKE7TS8VAvurSC+0BFNqN7RI39M16rf60wBpgDRAGiB0r+mlQmANkMSmsdoGyJCV00YmtE72Vp4nOU73nsZTD5M65ZhgTtc2QKYd/Xw83TOddV8gfYH0BdIXCN1keqkQWF8giU1jtQ2QISunjUxoneytPE9ynO49jaceJnXKMcGcrm2ATDv6+Xi6ZzrrvkD6AukLpC8Qusn0UiGwvkASm8ZqjwaIqpgm+dZXMZXjRt30ATupWbVscNTeOsOTHLW3ala8N28Uc9rH6b7K7y51yQxVk3quvRlv498DmSbZANE1mqvjBcK/pJcw096KqfuoeMnlrL1Vs+IlHFW39lYt2vfV6tTHRLd6rr0ZrwGSjOlxrZquHXXYipfUqZYNjtpb9ZzkqL1Vs+I1QHQ7Pr8umaGym94fxmuA6Iiu69T0a6QfFRuLpr1VywZH7a1aTnLU3qpZ8Roguh2fX5fMUNlN7w/jNUB0RNd1avo1UgNEPZK6lzqwwVeGp/Zxuq/M+E41L7WPDZC51Zs+OBuLpmpVywZH7a1aTnLU3qpZ8foC0e34/Lpkhspuen8YrwGiI7quU9OvkfoCUY+k7qUObF8gMvIvXfNS+9gAmdu1BsiMl3fwUTnqZTGN1xfIzC5uoOhOJL2n94fxGiDJmB7XqunacWPRtLdq2eCovVXLSY7aWzUrXgNEt+Pz65IZKrvp/WG8BoiO6LpOTb9G6ldY6pHUvdSB7VdYMvIvXfNS+5gEyLTw5MI92Xt6G1WL+qN4Gz+VqjcJR8XUOvVR8d7qVI/2nsbb4Jj4o7UbuqW39j15ZkRHWqO6eW8bIOkInq8fH+LBn0rVDdWseEmdHoYEU/Vo72m8BsjjaarfDZALHxsgybUxU6vLO335nDwMqnnG4X+jqI9Jb9WjvafxGiANkPccmN6z2/zfeFW4XgJ6sBUvqVMtylHxGiDJlGYuoOkZKl4DZGZ+J8/M3Lb+jaR3he5ZA2RjSheY40PsV1gPHdfDkKzCqRkmWqY5Jv5o7SmO2rcB0q+w3nUgOYh6GLROl1c5Kt7Jw5BwVB+1Tn1UvI2f7tWfRMsGZuKR1J7iqH1PnhnxL61R3bpnfYGkExioHx9iXyB9gbzjwPSeDaz+/4M4xVH7NkD6AukL5B8O6E8W05dFcmCne29oVj3aexpv45U0PZeTHNXvBkgDpAHSABm/+/QCaoBcXED4elYfddA6vwZIA6QB0gDRe4Xr9ALSi28a7+RP92ziwl/I1N7qdwPkQIDoodFhb9QlCzTdX/1RjoqXXCqqWXurluTAJpiiR7UI1lZNoln1JJhbuq5wp7Uo3hWvf/66+niyt+pRjiu/ia7NVcxGnQ57o7f6oxwVrwHyeJqJjxt7IZi6EyeDWHSkNTob9UfxEp536K161J8GiDo6WMfDWfh+WJdc5U5rOXnxqRb1ZqMumZ/qSTA3NAnmtBbFE24/a9THk71Vj3JsgKijg3U8nAbIQ9f1wOrodC6Kt1GXaFY9CeaGJsGc1qJ4wq0Bgi7pom0MBylymWphwKBQ/VGOivdGUTFVjvZO+m5gih7tK1hbNXfwcUO7zkb9UbxEyx16qx71py8QdXSwjofTF0hfIP9xQC+pt49N79ngEYihprUoXkJUZ3Oyt+pRjg0QdXSwjofTAGmANED+dODkmdGj3wC5cOqkQTpErVMtipfUnTwM07qntWxcFjob1aJ4G3XJ/FRPgrmhSTCntSiecPtZoz6e7K16lGNfIOroYB0Ppy+QvkD6AukLBO4eDS+Ayvze+Ael9IJUMRt104YnHNUf5ah4bxwVU/Vo76TvBqbo0b6CtVVzBx83tOts1B/FS7TcobfqUX/6AlFHB+t4OH2B9AXSF0j2E/HCmdGj3wBRp75w3ckhqi3KUfGSuunwSnpP105rUbxEh85aeytewlF7J5haq3qmOWpf1fFWpxy1t+IlHKd7Ry+QhOip2mmDNnQox43eupQnOaruaS2Kp/ze6tRH7a14CUftnWBqreqZ5qh9VUcDJHHqC9fqYkwvZGKJckwwtVZ1n+R4Sot6o/waINdO6Z5Nz0b7Xiv4u0I5am/FSzhO9+4LJHF/qFaHONTuXzC6lCc5qu5pLYqn/Bog107pnk3PRvteK2iA/JGY9NVrdTGmFzLxRTkmmFqruk9yPKVFvVF+DZBrp3TPpmejfa8VNEAaIMmWDNRuLK/S0oN4kuMpLeqN8muAXDulezY9G+17raAB0gBJtmSgdmN5lZYexJMcT2lRb5RfA+TaKd2z6dlo32sFDZAGSLIlA7Uby6u09CCe5HhKi3qj/Bog107pnk3PRvteK2iANECSLRmo3VhepaUH8STHU1rUG+XXALl2Svdsejba91pBA6QBkmzJQO3G8iotPYgnOZ7Sot4ovwbItVO6Z9Oz0b7XChog4wGyMRwdpC7aSY4ntdzBn3L89YaoN7pjdwm5RI/U3sFH0XG6ZuXvgZy8nHUxTnLUoW9o2cBUPVpXjg0Q3ZWP1umOJfh6p2z0TnhO1jZAJt0cxtJF08V9o7eBOSy7HB8YqvNLZqL7o70VL+E4Xatakr6qe6N3wnOytgEy6eYwli6aLm4DZG5AG7MRdtpXsH7W6P5ob8VLOE7Xqpakr+re6J3wnKxtgEy6OYyli6aL2wCZG9DGbISd9hWwHJaIAAAbRklEQVSsBkji0nWtnsONGV6z26logOz4OoKqi6aL2wAZGcufIBuzEXbaV7AaIIlL17V6DjdmeM1up6IBsuPrCKoumi7uyYsvMWRDd9Jfak9x1L6ioQGSuHRdq+dwY4bX7HYqGiA7vo6g6qLp4jZARsbSF8iFjck+zk0kQ9KzlaCq7o3eCc/J2gbIpJvDWLpourgNkLkBbcxG2GlfweoLJHHpulbP4cYMr9ntVDRAdnwdQdVF08VtgIyMpS+QvkDedUDPoZ7ruW3dQzoaIK9kZDKi6UVTvISj1p6c4bTuDS3THHUuJ39Y2PBRdavfCccNTNGjfZNZS9+kpgGSuDVUq4uhS654Q/T/BaMcN3pP697QMs0x8VH1THPUvokWrVUtCccNTNGjfRsg4uYL1ehi6JIr3oaFynGj97TuDS3THBMfVc80R+2baNFa1ZJw3MAUPdq3ASJuvlCNLoYuueJtWKgcN3pP697QMs0x8VH1THPUvokWrVUtCccNTNGjfRsg4uYL1ehi6JIr3oaFynGj97TuDS3THBMfVc80R+2baNFa1ZJw3MAUPdq3ASJuvlCNLoYuueJtWKgcN3pP697QMs0x8VH1THPUvokWrVUtCccNTNGjfRsg4uYL1ehi6JIr3oaFynGj97TuDS3THBMfVc80R+2baNFa1ZJw3MAUPdq3ASJuvlCNLoYuueJtWKgcN3pP697QMs0x8VH1THPUvokWrVUtCccNTNGjfRsg4uYL1ehi6JIr3oaFynGj97TuDS3THBMfVc80R+2baNFa1ZJw3MAUPdq3ASJuvlCNLoYuueJtWKgcN3pP697QMs0x8VH1THPUvokWrVUtCccNTNGjfW8TICpIh6N4GwYlvWXYSY36k2BqrepWjoqn/DZmrb0TLSf9UT3KUfHUn+m+yi+pUy3JPiaYCVepPeV59DfR1SAVo3jJEMXst5qkt2JqnfqjeEmd6laOipdw1N4JptQmWpRjgikckxrlqJiqZbqv8kvqVEty9ySYCVepPeV5A0SmM1xzathJcCrHjUOjvYfHEv1QoRw3/FHdylHxVMt0X+WX1KmWBshjVxsgydYN1Z48YHpwlKPiJdZp7wRTahMtyjHBFI5JjXJUTNUy3Vf5JXWqpQHSAHnXgWSBksWU2pMHTHUrR8UTX37WaO8EU2oTLcoxwRSOSY1yVEzVMt1X+SV1qqUB0gBpgPzDAT04egkoXnK4tXeCKbWJFuWYYArHpEY5KqZqme6r/JI61dIAaYA0QBogdLf0Urm4LH7/nXxsgJBNo0WnPO/vgYyO0cBODfuNnV6SylHxzJkfVdo7wZTaRItyTDCFY1KjHBVTtUz3VX5JnWpJ9jHBTLhK7SnPGyAyneGaU8NugMz8hP1dLxW9IE/utx5V1fJdZ80+/hFMW01XSMVLhsjC8TmueEmd+pNgaq16rhwVT/ltzFp7J1pO+qN6lKPiqT/TfZVfUqdakn1MMBOuUnvK875AZDrDNaeG3RdIXyDPrLJekCf3W/WplgbIxZk5+QLRYScXX4Iptclh0KVMMIVjUqMcFfMOWk5yVB+n56J9k7oNH6d1K8ekr2Kql0lvxVSO2pvxGiCPR6RGJiGXYOoCaZ0ukOLdQctJjurj9Fy0b1K34eO0buWY9FVM9TLprZjKUXszXgOkAaJL+l6dLtozPX712enDsMFRMVWL4m3Ubcx6WrdyTPoqpnqe9FZM5ai9Ga8B0gDRJW2APOPU48/qwd5jcI2sl8o10t8V07qVY9JXMVV30lsxlaP2ZrwGSANEl7QB8oxTDZD3HNALTZ3niy/4U5iKqRynNb/1VY7am/EaIA0QXfwGyDNONUAaID8c0Es82Ta+8DE4Ga8B0gBJFvW/tbpoz/T41Wf1IJ7kqLpVi+Jt1G34OK1bOSZ9FVM9T3orpnLU3ozXAGmA6JL2BfKMU32B9AXSFwidIE0vAvurSJMzwZTaRItyTDCFY1KjHBXzDlpOclQfp+eifZO6DR+ndSvHpK9iqpdJb8VUjtqb8foC6QtEl7QvkGec6gukL5C+QEZPkKbcW1NNzlGCIZjqUS2Kl9DU3oq5wVF7a51q3tAy3Vvx3rxRPYo5jbfBUXdCtSheUqd+J5jTterPyv8LS8UoyQaIOnpdN728yQyv2e1UqOYNLdO9FW/jclZ/TnLUDVItipfUJf4kuJO16k8DZNB1Nn34j9IlEqaXVzUnHKdrVfOGluneitcAebxFG7PWvU1mqJjTdepPA2TQeTa9ATLo+jWUHlid33XHvyumeyteA6QBkuzpf2v1LDRAnnH5P59l0xsgg65fQ+mlq/O77tgAUY/Uc53hdF/FS+qmtSS9tZbnsvGnsKZJvuG9lOkNEF2RkTrdHT00Canp3orXF0hfIMme9gXyjFtDn9ULSC8BxUvoa2/F3OCovbVONW9ome6teA2QBoiej/fq9Cz0K6xnXO5XWPxHRQdtjqH00tVDkxCY7q14DZAGSLKnfYE849bQZ/UC0ktA8RL62lsxNzhqb61TzRtapnsrXgOkAaLnoy+QZ5wa/KxeQHoJKF4iQXsr5gZH7a11qnlDy3RvxWuANED0fHxagDxD6L3P3uEwJJoTPQnuVW1y8SlHxZzGe9O6gXnl4davT2tRvA090zuRhJzqUX9Uy8Y+KkfVvFGn/kS/BzJNNDGSBb3Qn3BSv9Wbk4fhJEf1caNOd1z9UbwNLRscFVP1qD9J32lMxVPNG3XqTwNk0P1Ti6HDboAMDhuhdCd0hoqH9KKyDY6KqUTVn6TvNKbiqeaNOvWnATLo/qnF0GE3QAaHjVC6EzpDxUN6UdkGR8VUoupP0ncaU/FU80ad+tMAGXT/1GLosBsgg8NGKN0JnaHiIb2obIOjYipR9SfpO42peKp5o079aYAMun9qMXTYDZDBYSOU7oTOUPGQXlS2wVExlaj6k/SdxlQ81bxRp/40QAbdP7UYOuwGyOCwEUp3QmeoeEgvKtvgqJhKVP1J+k5jKp5q3qhTfxogg+6fWgwddgNkcNgIpTuhM1Q8pBeVbXBUTCWq/iR9pzEVTzVv1Kk/DZBB908thg67ATI4bITSndAZKh7Si8o2OCqmElV/kr7TmIqnmjfq1J8GyKD7pxZDh90AGRw2QulO6AwVD+lFZRscFVOJqj9J32lMxVPNG3Xqz0qAvJRB+BcT34aopuvAN3x8JY4b/uhstO6V/FbNr1Z3as+S3VGOCabMsQFy4ZIOpgEi62Y1uuTJbKzzfJVq0c4bmqc5qpa71G14LtqTuSjHBFM4NkAaILInv6zRxU2a6JJv9E54Sq1qEay3mg3N0xxVy13qNjwX7clclGOCKRwbIA0Q2ZMGyAddGj+wwVeqSnmao/a9S51eztN6krkoxwRT9DRAGiCyJw2QD7o0fmAbIB+cxMc/ppfzxzu8/8lkd5Rjgil6GiANENmTBsgHXRo/sA2QD07i4x/Ty/njHRog/3LglOHJAPVgJ1oUU3kmvRXzlThu+KM+at0r+a2aX63u1J4lu6McE0yZY18gfYHInvQF8kGXxg9sXyAfnMTHP6aX88c79AXSF0j/HsjY+dFL99TBToSqFsXc0DzNUbXcpW7Dc9GezEU5JpjCsS+QvkBkT/oC+aBL4we2L5APTuLjH9PL+eMd+gLpC6QvkLHzo5fuqYOdCFUtirmheZqjarlL3Ybnoj2Zi3JMMIVj9AI5RVKEfIUa9ecrcL3ioIt2UvM0R8V7825ad9L7anY/f105bvQ+xXFDs2KqZq1L5qIcE0zh2QARl7BGh4hwR8t00U5qnuaoeA2QudXU/dHZTONtzFrdU80JxwRTeDZAxCWs0eVFuKNlumgnNU9zVLzkwOoQk96KqbPZ6H2K44ZmxVTNWpfMRTkmmMKzASIuYY0OEeGOlumindQ8zVHxGiBzq6n7o7OZxtuYtbqnmhOOCabwbICIS1ijy4twR8t00U5qnuaoeMmB1SEmvRVTZ7PR+xTHDc2KqZq1LpmLckwwhWcDRFzCGh0iwh0t00U7qXmao+I1QOZWU/dHZzONtzFrdU81JxwTTOHZABGXsEaXF+GOlumindQ8zVHxkgOrQ0x6K6bOZqP3KY4bmhVTNWtdMhflmGAKzwaIuIQ1OkSEO1qmi3ZS8zRHxWuAzK2m7o/OZhpvY9bqnmpOOCaYwrMBIi5hjS4vwh0t00U7qXmao+IlB1aHmPRWTJ3NRu9THDc0K6Zq1rpkLsoxwRSeDRBxCWt0iAh3tEwX7aTmaY6K1wCZW03dH53NNN7GrNU91ZxwTDCFZxQgApjU6LDfMKeFK8+THLV34o1iqj/ae7qv8kt2Z4PjSX+0t3qp/kz3TS5I1XKybsMf1TM9wwbIhfNqeHJRnRr2xkHUw5D4qP5o3UmOd+itPuoMVbP23djbpPd07YY/ynF6hg2QBoju3rt1ehh0cZ8i84sPn+R4h97quc5QNWvfBkji1OPa6Rk2QBogT22nXha6uE+RaYD8ywGdjXquM5zu2wDRCV3XTc+wAdIAud66BxV6WejiPkWmAdIA2VigYUw9M8Nt/4TTc6gcGyANkKf2lBdt4R9CUuInOd6ht/o4fflo3+TiSzBP1epObPCbnmEDpAHy1J7qYdDFfYpMXyB9gWws0DCmnpnhtn2BbBh6hZlcfNOLob2Tvop55cvPX9fe032V31vdSY536K1e6gxVs/btCyRx6nHt9Az7AukL5Knt1MtCF/cpMn2B9AWysUDDmHpmhtv2BbJh6BVmcvFNL4b2Tvoq5pUvfYGYQzqb6bkkLy9TMv8bsNq3L5DEqW/0Apmz5V5IG5eFOjB9oU3jqY6TF2TSe3rW6vfJS/ckx6R3smtSOz1r6bn1g5z6ePQrrMSgV6r9lou28KewdMl1d5K5aO8EU3hq3waIuDlbMz3rhJ3uhXJkvD+0MlHT2ocO6BA3bNRxK8dpvESz9lZM1dwXyGNHk7kknssck96Cl9RMa0l6q27lyHgNkGRMM7U6xJlu/0bhxcAXwzReoll7K2YyF+2dYApP7dsXiLg5WzM964Sd7oVyZLwGSDKmmVod4ky3Boj6mMyFDxgGsXLUvg0QdXSuLtmfua4/kHQvlCPjNUCmR3mNp0O8RsoreDHw4pvGSxRpb8VM5qK9E0zhqX0bIOLmbM30rBN2uhfKkfEaIMmYZmp1iDPd+gJRH5O58AHDIFaO2rcBoo7O1SX7M9e1L5BpL7883rdctOGLNHm260Ikc9GLPMEUntq3ASJuztZMzzphp3uhHBmvL5BkTDO1OsSZbn2BqI/JXPiADQen9m2A6NTn6pL9mevaF8i0l18e71su2vBF2hfI9Zqf2rOTIZf0vnYwqzjld3IWlKP6GP1FQm2e2f461Wz68GWqfTd+Kk1666R1z6Z7a9+jBzbYHfUn0S0z1L6C9bNGOWpvxduYtepWLSfPdQNEpwl1OvBkeaEt/xG+k4smOrYuC+2dzGV61tN4d7n4pmfzXX1Mdlc8Zx+T3wOZJilC7lTDpgc/RYp+7dsAeexmst/quWJO4zVAvu6s5Uwn8zt5rvsC0WlC3cYlAG37AhGToEYv++RwK+bG7mxggo3RPgpeckFuaN7AFN3aN/FH+kb73ReIWnpdpwPXS+W6448K7Xty0VRLwjHRLf2TuWhvxZzGS/ZCOYqHSV/F29iJRPPGbES79k38kb7JDPsCUUehTgeeLC+0bYCISVCTzGV61tN40SVw8CtVGMufJTqb7+qj+qN+s499gail13Vs+sEDe2rRrt37u0I5qt/aW/tuXM6q5SRH9VG1KF4D5NqpZC+u0fxbjb5AxE2s0YNzatjJQUTJ0etHMdUf9Xu6bwPksaPTc0n2Vnvrjm3MWvdRtST+TPdugKijUKcDT5YX2kaX+MneoiU5DOr3dN+NS0W1JPPbwBQvta9g/axR3dpb8TZmrbpVS3Jmpns3QNRRqNOBJ8sLbRsgYhLUJHOZnvU03l0uPhjLnyU6m+/qo/qjfrOP/T0QtfS6jk3v74E8NFMPg/p9PbkfFdp343JWLSc5qo+qRfGS2WjvV/Mx0SO+s48bAaLNRcjpmmQwr6RbfVd/Em82MEWP9hWsnzWJ7gR3slZ1b2jR3qp3g6P2fiUtrLkB8tiqZClOLq8OfLpO/Um82cAU3dpXsBog5tK058meGUOveiUtqnrl90BODlGFa12yFK+ke9qfxBv1PMEUPdpXsBog5tK059M7YSp+VL2SFtXdALlwKlmKk8urA5+uU38SbzYwRbf2FawGiLk07XmyZ8bQq15Ji6pugDRAdFferdNDkxzsDUwRqX0FqwFiLk17nuyZMfSqV9KiqhsgDRDdlQbIB5w6eaEpXb34NrRob9WywVF7v5IW1tzfRH9sVbIUJ5dXBz5dp/4k3mxgim7tK1h9gZhL054ne2YMveqVtKjqvkD6AtFd6QvkA06dvNCUrl58G1q0t2rZ4Ki9X0kLa+4LpC8QXZb36vTQJAd7A1M0al/B6gvEXJr2PNkzY+hVr6RFVfcF0heI7kpfIB9w6uSFpnT14tvQor1VywZH7f1KWljzyRfItOEq+q1OFy3hqJjKU3tP933jd7K3+jNdp5o39ufkDNVH5XjSR9Vyhzr1++R5PfoCSRZteuA6nISjYqoW7T3d9+RCqjcbdep3A+Sx+yd93NiLU5jJuVbPE0zR3QD5wl9hnVqKBsj10dGDeIcZXqv9UTGteQtT9Xz1OvX75HltgDRA3nXg5MV36mCr5o2LL7ks1J9Ej2Aqx6TvBqZouUONetMAOTBNHc7GYVC52lu1aN+TC5lwnK5Vvxsg/Qprevfew0vOte5ugika+wLpC6QvkL8c0EPYAGmAyOX6bE1y2evuJpjCvwHSAGmANEDkrujvgZBLc0XJZd8AmfOdkHQ4Opjkp1IiePiP0qpu9VE1n6xTzcmsFXPDR+2tnivHpO8Gpur56nXqzcmvnPsC6QukL5C+QOgu1QutAUJ2Xhap3w2QSyvnC3Q4G4dB1Whv1aJ9Ty5kwnG6Vv3uC+Sx8yd9nN6Jk3jJuVbPE0zR3hfIgRfIqWHLQvysmeaoeAlHPQwbvZWnclS8RIv2TjCFp/YVrK2aRLPqSTBFl/YVrK2aBkgD5FO+wpo+XBuvgI1DNn0JJD5q7wRTPNK+grVVk2hWPQmm6NK+grVV0wBpgDRAtk5X8Le3lUJySekFlGAKT+0rWFs1iWbVk2CKLu0rWFs1DZAGSANk63Q1QBadfQ46uez1Ik8whb32FaytmgZIA6QBsnW6GiCLzj4HnVz2epEnmMJe+wrWVk0DpAHSANk6XQ2QRWefg04ue73IE0xhr30Fa6umAdIAaYBsna4GyKKzz0Enl71e5AmmsNe+grVV0wBpgDRAtk5XA2TR2eegk8teL/IEU9hrX8HaqmmANEAaIFunqwGy6Oxz0Mllrxd5ginsta9gbdU0QBogDZCt09UAWXT2OejksteLPMEU9tpXsLZqGiBfOEB06Mmi6ZInmMJT+wrWz5ppjklvrZ3WnWg+1Xu675vXiW6ZzQZH6ZvUJJpVT4IpXBsgDZB3HRhftN9/l32MaqY5Rs2xWA82wkUX6ane030bINfboZ5Pn5kGSAOkAXJ9Pj9coQdbGyQXwKne030bINfboZ4n+3Pd9bffGiANkAaInJQP1ujBVvjkAjjVe7pvA+R6O9TzZH+uuzZALj3SwSRLnmBeEgy/H9be44vWr7BklJc1yVx01pdN/yrQ3tN9k7OlWjY4am+tU7/f8FRPgik8+wLpC6QvEDkpH6zRg63wyQVwqvd03wbI9Xao58n+XHftC+TSIx1MsuQJ5iXBvkDEomM1d5i1mqOXz7Tm5Gyplg2O2lvr1O++QNTRwTodTrJoG5giWfseXbR+hSWjvKzZmPVl078KtHdyZqZ7K94GR+2tder30XP9R8BSTVdIxVPDk7oNjhuYokn7Hl20BoiM8rJmY9aXTRsgatFo3casE0wR098DuXApCTkdToIpQ9S+DRBxc7bmDrNWxbpn05rf+Glv1bLBUXtrXaJZ9SSYwrMB0gB514HxResLRM7jZU0yF71ULpv2BaIWjdZtzDrBFDFHA0QInq5JDuH0cDa0J3om+294M63lDhyTmUzrmfb75Mti2ptkLnfwUfU0QA68QHQ4G3Ubyys8Nw7stJY7cBSvf9ZM65n2uwGSTPNx7fSslVkDpAGiu/JU3caCT19od+CYDGFaz7TfDZBkmg2QObc+ESk5NNMHdkNmomey/4Y301ruwDGZybSeab8bIMk0GyBzbn0iUnJopg/shsxEz2T/DW+mtdyBYzKTaT3TfjdAkmk2QObc+kSk5NBMH9gNmYmeyf4b3kxruQPHZCbTeqb9boAk02yAzLn1iUjJoZk+sBsyEz2T/Te8mdZyB47JTKb1TPvdAEmm2QCZc+sTkZJDM31gN2Qmeib7b3gzreUOHJOZTOuZ9rsBkkyzATLn1iciJYdm+sBuyEz0TPbf8GZayx04JjOZ1jPtdwMkmWYDZM6tT0RKDs30gd2QmeiZ7L/hzbSWO3BMZjKtZ9rvBkgyzW8UIHO23Avp1IGd7vvmul4W2lvx7jJx1T2tJ/FROSaY03qUo/bd0HIHjuqP1qnmlb9IqCRfrU5NV916GKb7NkCuJ7Th+XVXD/bkp3vdM+GX1kz7uKHlDhxT36/qVXMD5MrJ4NfVdIXUwzDdtwFyPaENz6+7NkCuPNIzc4Xzz1+fnvUGx0SP1KrmBoi4iTVqOsKNf42kfRsg105Nz/q644+K5PJRjgmm8tQ65ah4G1ruwFH90TrV3ABRR6FOTQeo6LKY7ptcVNp742Crjxt1qnu6d+Kjckwwp/UoR+27oeUOHNUfrVPNDRB1FOrUdIBqgKhJh+qmZ60ykgtSOSaYylPrlKPibWi5A0f1R+tUcwNEHYU6NR2gGiBq0qG66VmrjOSCVI4JpvLUOuWoeBta7sBR/dE61dwAUUehTk0HqAaImnSobnrWKiO5IJVjgqk8tU45Kt6GljtwVH+0TjU3QNRRqFPTAaoBoiYdqpuetcpILkjlmGAqT61Tjoq3oeUOHNUfrVPNDRB1FOrUdIBqgKhJh+qmZ60ykgtSOSaYylPrlKPibWi5A0f1R+tUcxQg2rx1daAO1IE68PoONEBef8ZVWAfqQB1YcaABsmJrQetAHagDr+9AA+T1Z1yFdaAO1IEVBxogK7YWtA7UgTrw+g40QF5/xlVYB+pAHVhxoAGyYmtB60AdqAOv70AD5PVnXIV1oA7UgRUHGiArtha0DtSBOvD6DjRAXn/GVVgH6kAdWHHg/wDhPUU/TOikiAAAAABJRU5ErkJggg=="
+										alt="访问:发票抬头信息二维码"></a>
+						</h3>
+						</div>
+
+						<a href="https://time.is/zh/" title="Time.is">
+							<div id="Main" style="color:#990066;"></div>
+						</a>
+						<!-- /* 使用javascript中Date对象创建获取时间,使用一个div标签来显示获取当前时间的值 */ -->
+
+					</th>
+				</tr>
+			</thead>
+
+			<table>
+				<thead>
+					<tr>
+						<th>单位名称</th>
+						<th>
+							<a href="https://www.gsxt.gov.cn/index.html" target="_blank" title="国家企业信用信息公示系统"
+								style="color:#fff;">
+								统一社会信用代码</a><br>(<a href="https://12366.chinatax.gov.cn/sscx/taxpayer/main"
+								target="_blank" title="纳税人信息查询 | 国家税务总局 - 12366纳税服务平台" style="color:#fff;">纳税人识别号</a>)
+						</th>
+						<th><a href="https://amap.com/" target="_blank" title="高德地图" style="color:#fff;">注册地址</a>、电话
+						</th>
+						<th>开户银行及账号</th>
+						<th>
+							<a href="https://ip138.com/" target="_blank"
+								title="iP地址查询--手机号码查询归属地 | 邮政编码查询 | iP地址归属地查询 | 身份证号码验证在线查询网" style="color:#fff;">操作</a>
+						</th>
+					</tr>
+				</thead>
+				<tbody id="invoiceTableBody">
+					<!-- 这里可以通过 JavaScript 动态添加行 -->
+				</tbody>
+			</table>
+
+			<button id="addButton">添加发票抬头</button>
+
+
+
+
+
+			<script>
+				// 模拟一些初始数据
+				let invoiceData = [{
+						number: '1',
+						name: '浙江嘉兴禾氢科技有限公司',
+						taxId: '91330402MAC43G15XW',
+						address: '浙江省嘉兴市南湖区大桥镇<br>驰聘路1420号1幢408室，<br>0573-83388899',
+						bankInfo: '中国工商银行嘉兴科技城支行，<br>1204066909000049309'
+					},
+					{
+						number: '2',
+						name: '嘉兴三氢创慷市场营销策划有限公司',
+						taxId: '91330402MABYQ4EH9X',
+						address: '浙江省嘉兴市南湖区大桥镇<br>驰聘路1420号1幢409室，<br>电话：0573-83388899',
+						bankInfo: '中国建设银行嘉兴科技支行，<br>33050110836100001455'
+					},
+					{
+						number: '3',
+						name: '浙江瑞盈智能科技有限公司',
+						taxId: '91330402MA29HQE28P',
+						address: '浙江省嘉兴市南湖区大桥镇<br>驰骋路1420号2楼，<br>电话：0573-83839853',
+						bankInfo: '中国工商银行嘉兴科技城支行，<br>1204066909888019154'
+					}
+				];
+
+
+				function renderTable() {
+					let tableBody = document.getElementById('invoiceTableBody');
+					tableBody.innerHTML = '';
+					invoiceData.forEach(invoice => {
+						let row = document.createElement('tr');
+						row.innerHTML = `
+                    <td><a href="https://www.creditchina.gov.cn/xinyongxinxi/index.html?index=0&scenes=defaultScenario&tableName=credit_xyzx_tyshxydm&searchState=2&entityType=1,2,4,5,6,7,8&keyword=${invoice.name}&tyshxydm=${invoice.taxId}" target="_blank" title="信用信息·详情_信用中国 | 网站由国家发展改革委、中国人民银行指导，国家公共信用和地理空间信息中心主办，并由国家信息中心、中经网提供技术支持。" style="color:#000;">${invoice.name}</td>
+                    <td><a href="https://www.tianyancha.com/nsearch?key=${invoice.taxId}" target="_blank" title="搜索-天眼查" style="color:#000;">${invoice.taxId}</a></td>
+                    <td>${invoice.address}</td>
+                    <td>${invoice.bankInfo}</td>
+                    <td>					
+					<button class="copyButton">一键复制</button>
+					<!-- <button class="editButton">编辑</button><button class="deleteButton">删除</button> -->
+					<button class="searchButton"><a href="https://www.qcc.com/web/search?key=${invoice.taxId}" target="_blank" title="搜索-企查查" style="color:#000;">企查查</a></button>
+					</td>
+                `;
+						tableBody.appendChild(row);
+					});
+				}
+
+				document.getElementById('addButton').addEventListener('click', function() {
+					let newInvoice = {
+						name: prompt('请输入名称：'),
+						taxId: prompt('请输入纳税人识别号：'),
+						address: prompt('请输入地址、电话：'),
+						bankInfo: prompt('请输入开户行及账号：')
+					};
+					invoiceData.push(newInvoice);
+					renderTable();
+				});
+
+				document.addEventListener('click', function(event) {
+					if (event.target.classList.contains('copyButton')) {
+						let row = event.target.parentNode.parentNode;
+						let name = row.cells[0].textContent;
+						let taxId = row.cells[1].textContent;
+						let address = row.cells[2].textContent;
+						let bankInfo = row.cells[3].textContent;
+						let textToCopy =
+							`单位名称：\n${name}\n\n纳税人识别号：\n${taxId}\n\n地址、电话：\n${address}\n\n开户行及账号：\n${bankInfo}\n`;
+						navigator.clipboard.writeText(textToCopy)
+							.then(function() {
+								alert('发票抬头信息已复制到剪贴板！');
+							})
+							.catch(function(error) {
+								console.error('无法复制到剪贴板：', error);
+							});
+					} else if (event.target.classList.contains('editButton')) {
+						let row = event.target.parentNode.parentNode;
+						let newName = prompt('请输入新名称：', row.cells[0].textContent);
+						let newTaxId = prompt('请输入新纳税人识别号：', row.cells[1].textContent);
+						let newAddress = prompt('请输入新地址、电话：', row.cells[2].textContent);
+						let newBankInfo = prompt('请输入新开户行及账号：', row.cells[3].textContent);
+						row.cells[0].textContent = newName;
+						row.cells[1].textContent = newTaxId;
+						row.cells[2].textContent = newAddress;
+						row.cells[3].textContent = newBankInfo;
+					} else if (event.target.classList.contains('deleteButton')) {
+						let row = event.target.parentNode.parentNode;
+						if (confirm('确定要删除该发票抬头吗？')) {
+							invoiceData.splice(invoiceData.indexOf(row), 1);
+							renderTable();
+						}
+					}
+				});
+
+				// 初始渲染表格
+				renderTable();
+			</script>
+
+			<div class="footer">
+				<!-- /*<strong>
+			<a href="https://go.choong.net/1949/" style="color:#fff;text-decoration:none;" title="我爱我的祖国"> 
+				  <script>// <![CDATA[
+			                 document.write(new Date().getFullYear());
+			                 // ]]>
+			     </script>
+			   </a>	
+				    © 
+				  <a target="_blank" href="https://choong.net" style="color:#fff;text-decoration:none;" title="网站技术支持 : 虫虫物语 | 乐哥在线 choong.net">Reliance Wisdom</a>
+			</strong>-->
+
+
+				<a target="_blank" href="https://edu.ckyz.net/live/" style="color:#fff;text-decoration:none;"
+					title="瑞联新媒体·技术支持 :  乐哥在线 choong.net">本站已稳定运行</a>：<a target="_blank" href="https://choong.net"
+					style="color:#fff;text-decoration:none;" title="瑞联官网·技术支持 : 乐哥在线 choong.net"><span id="htmer_time"
+						style="color:#33CC33;">载入中...</span> </a>
+				<script>
+					function secondToDate(second) {
+						if (!second) {
+							return 0;
+						}
+						var time = new Array(0, 0, 0, 0, 0);
+						if (second >= 365 * 24 * 3600) {
+							time[0] = parseInt(second / (365 * 24 * 3600));
+							second %= 365 * 24 * 3600;
+						}
+						if (second >= 24 * 3600) {
+							time[1] = parseInt(second / (24 * 3600));
+							second %= 24 * 3600;
+						}
+						if (second >= 3600) {
+							time[2] = parseInt(second / 3600);
+							second %= 3600;
+						}
+						if (second >= 60) {
+							time[3] = parseInt(second / 60);
+							second %= 60;
+						}
+						if (second > 0) {
+							time[4] = second;
+						}
+						return time;
+					}
+				</script>
+				<script type="text/javascript" language="javascript">
+					/* 帮助工具 🔨 https://www.topster.cn/tools/ */
+					function setTime() {
+						/* 本站创建时间秒数，时间格式中，月比较特殊，是从0开始的，所以想要显示5月，得写4才行，如下*/
+						var create_time = Math.round(new Date(Date.UTC(2014, 12, 12, 0, 0, 0)).getTime() / 1000); /* 当前时间秒数,增加时区的差异 */
+						var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+						currentTime = secondToDate((timestamp - create_time));
+						currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天' + currentTime[2] + '时' + currentTime[3] + '分' +
+							currentTime[4] + '秒';
+						document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+					}
+					setInterval(setTime, 1000);
+				</script> <!-- /* 激励着我勇敢前行的那些经历 */ -->
+			</div>
+	</body>
+
+</html>

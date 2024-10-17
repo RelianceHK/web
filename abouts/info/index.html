@@ -386,7 +386,7 @@
 						let address = row.cells[2].textContent;
 						let bankInfo = row.cells[3].textContent;
 						let textToCopy =
-							`单位名称：\n${name}\n\n纳税人识别号：\n${taxId}\n\n地址、电话：\n${address}\n\n开户行及账号：\n${bankInfo}\n`;
+							`单位名称：\n${name}\n\n纳税人识别号：\n${taxId}\n\n注册地址、电话：\n${address}\n\n开户行及账号：\n${bankInfo}\n`;
 						navigator.clipboard.writeText(textToCopy)
 							.then(function() {
 								alert('发票抬头信息已复制到剪贴板！');

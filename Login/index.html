@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<head>
+
+<meta charset="utf-8">
+<title>登录 - 三氢创康 | 瑞联集团</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" media="screen" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="css/supersized.css">
+<link rel="stylesheet" href="css/login.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="js/html5.js"></script>
+<![endif]-->
+<script src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/tooltips.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+
+
+    <link rel="stylesheet" href="https://go.choong.net/assets/css/style.css?v=85ead8fb5213bc5749ed549b93e6d17718895313">
+ 
+<style>
+        .table-box {
+            margin: 100px auto;
+            width: 1024px;
+        }
+ 
+        /* 滚动条宽度 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            background-color: transparent;
+        }
+ 
+        /* 滚动条颜色 */
+        ::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+ 
+        table {
+            width: 100%;
+            border-spacing: 0px;
+            border-collapse: collapse;
+        }
+ 
+        table caption{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 50px;
+        }
+ 
+        table th, table td {
+            height: 50px;
+            text-align: center;
+            border: transparent; /*边框颜色：透明 transparent; | 1px纯灰；1px solid gray;*/
+        }
+ 
+        table thead {
+            color: blue;
+            background-color: none; /*底色：无*/
+        }
+ 
+        table tbody {
+            display: block;
+            width: calc(100% + 0px); /*这里的8px是滚动条的宽度*/
+            height: 200px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+ 
+        table tfoot {
+            background-color: transparent;
+        }
+ 
+        table thead tr, table tbody tr, table tfoot tr {
+            box-sizing: border-box;
+            table-layout: fixed;
+            display: table;
+            width: 100%;
+        }
+ 
+        table tbody tr:nth-of-type(odd) {
+            background: none; /*滚动栏底色：无*/
+        }
+ 
+        table tbody tr:nth-of-type(even) {
+            background: transparent;
+        }
+ 
+        table tbody tr td{
+            border-bottom: #FFF000;
+        }
+ 
+    </style>
+	
+	<style> 
+		    body {
+	        background:url("R-C.jpg")  no-repeat center center;   /*加载背景图：夏日泸沽湖星空桌面壁纸 -桌面天下（Desktx.com）wallpaper.desktx.com|1348 × 596 jpeg https://tse1-mm.cn.bing.net/th/id/R-C.0385af5919ef31342561e0b4e6af9086?rik=%2fniPkdqb9Qsssw&riu=http%3a%2f%2fwww.desktx.com%2fd%2ffile%2fwallpaper%2fspace%2f20170508%2f226757928ea8334d6aeb37a7aeab8480.jpg&ehk=48Lmn1Gt2c6lhpR6cZmQKYmEHeWQUx0pQ0QMADviPa4%3d&risl=&pid=ImgRaw&r=0 */   /* 背景图不平铺 https://go.choong.net/City/images/ZJ-ReYi.jpg */  /*原图链接 https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4ncJa.jpg */
+			background-size:cover;  /* 让背景图基于容器大小伸缩 */
+			background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */    //此条属性必须设置否则可能无效/
+			background-color: #CCCCCC;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
+		    }
+	    </style> 
+	
+		<style>  /* 文本垂直对齐图像 https://www.w3cschool.cn/tryrun/showhtml/trycss_vertical-align */
+		    img.top {vertical-align:text-top;}
+		    img.bottom {vertical-align:text-bottom;}
+	       </style>
+		    <style><!-- 二维码的动态效果 -->
+	        body {
+	            margin: 0px;
+	        }
+	
+	        #box {
+	            width: 100%;
+	            height: 70px;
+	            background-color: #4671303;
+	
+	            position: fixed;
+	            bottom: 0px;
+	        }
+	
+	        #wechat {
+	            width: 64px;
+	            height: 64px;
+	
+	            background-image: url("./../images/choong.logo.png");
+	            background-repeat: no-repeat;
+	            background-size: 100%;
+	
+	            margin: 28px auto;
+	
+	            position: relative;
+	        }
+	
+	        #code {
+	            display: none;
+	
+	            width: 180px;
+	            height: 180px;
+	            background-color: white;
+	
+	            background-image: url("./../images/choong.WX-Qcode.png");<!-- 显示的图片| 微信公众号·二维码 -->
+	            background-repeat: no-repeat;
+	            background-size: 100%;
+	
+	            position: absolute;
+	            left: -66px;
+	            bottom: 70px;
+	        }
+	
+	        #wechat:hover {
+	            background-image: url("./../images/WX-logo.svg"); <!-- 显示的图片| 微信公众号 -->
+	        }
+	
+	        #wechat:hover>#code{
+	            display: block;
+	        }
+	
+		  #CDT-box {
+	            width: 0%;
+	            height: 0px;
+	            background-color: #4671303;
+	
+	            position: fixed;
+	            title: 0px;
+	        }
+			
+			#CDT-logo {
+	            width: 85px;
+	            height: 85px;
+	
+	            background-image: url("https://go.choong.net/apple/apple-podcasts.png");<!-- 显示的图片| 苹果播客·官方图标 -->
+	            background-repeat: no-repeat;
+	            background-size: 100%;
+	
+	            margin: 50px auto;
+	
+	            position: relative;
+	        }
+			
+			#CDT-logo:hover {
+	            background-image: url("https://go.choong.net/images/QR-code.svg"); <!-- 【扫码图示】的图标 -->
+	        }
+	       
+		   
+	        #CDT-logo:hover>#CDT-code{
+	            display: block;
+	        }
+			
+			#CDT-code {
+	            display: none;
+	            width: 635px;
+	            height: 445px;
+	            background-color: white;
+	            background-image: url("./../images/CDT-Podcast.jpg");<!-- 【官方分享版】扫码进入【404档案馆 | 中国数字时代】【苹果·播客】二维码 -->
+	            background-repeat: no-repeat;            <!-- 【中国数字时代 - 官方网站·阅读全文】 https://chinadigitaltimes.net/chinese/ -->
+	            background-size: 100%;                   <!-- 在电报(Telegram)平台向官方投稿 https://t.me/cdtmedia_bot -->
+	
+	            position: relative;
+	            left: -1px;
+	             bottom: -88px;
+	        }
+	    </style><!-- 二维码的动态效果 -->
+</head>
+
+<body>
+
+<div class="page-container">
+	<div class="main_box">
+		<div class="login_box">
+			<div class="login_logo">
+				
+				<img src="images/3H-logo.png" >
+				
+				
+			</div>
+		<!--
+			<div class="login_form">
+				<form action="/index.html" id="login_form" method="post">
+					<div class="form-group">
+						<label for="j_username" class="t">邮　箱：</label> 
+						<input id="email" value="" name="email" type="text" class="form-control x319 in" 
+						autocomplete="off">
+					</div>
+					<div class="form-group">
+						<label for="j_password" class="t">密　码：</label> 
+						<input id="password" value="" name="password" type="password" 
+						class="password form-control x319 in">
+					</div>
+					<div class="form-group">
+						<label for="j_captcha" class="t">验证码：</label>
+						 <input id="j_captcha" name="j_captcha" type="text" class="form-control x164 in">
+						<img id="captcha_img" alt="点击更换" title="点击更换" src="images/captcha.jpeg" class="m">
+					</div>
+					<div class="form-group">
+						<label class="t"></label>
+						<label for="j_remember" class="m">
+						<input id="j_remember" type="checkbox" value="true">&nbsp;记住登陆账号!</label>
+					</div>
+					<div class="form-group space">
+						<label class="t"></label>　　　
+						<button type="button"  id="submit_btn" 
+						class="btn btn-primary btn-lg">&nbsp;登&nbsp;录&nbsp </button>
+						<input type="reset" value="&nbsp;重&nbsp;置&nbsp;" class="btn btn-default btn-lg">
+					</div>
+				</form>
+			</div> -->
+			<table>
+				<!--
+				<tr>
+					<td style="text-align:center;">
+									   	<img title="cli_110px.png" style="width:80px" src="./../mcn/Qcode/wx-xcx.jpg">
+				      </td>
+					  <td>
+						  微信扫码进入<br>
+						  【三氢创康】小程序
+					  </td>
+				</tr>-->
+				<br><br>
+			<tr style="font-size: 28px;">
+			  <th> 
+			      <img title=cli_110px.png style=text-align:right; alt=cli_110px.png src="./../mcn/ico/3H-logo.png" height="50" width="50">    
+			      <br>
+				  <a href="https://www.selfhealthy.cn/" style="color:#D63117" title="【电脑】后台登录 - 总部|管理端">总部登陆</a>
+				</th>
+			  <th>
+				   <img class="bottom" title=cli_110px.png style=text-align:right; alt=cli_110px.png src="./../mcn/ico/login_icon.png" height="50" width="50">  
+			       <br>
+				   <a href="https://www.selfhealthy.cn/store/store/login/login.html " style="color:#D63117"  title="【电脑】后台登录 - 门店|管理端">门店登陆</a>
+			  </th>
+			</tr>			  
+			</table>
+			<br>
+			<tr>
+							<td colspan="3">
+								<marquee behavior=alternate scrolldelay=300>
+									【APP工具简介】
+									三氢创康APP是瑞联集团推出面向三氢创康会员的一款集身体成份测量，客户管理，俱乐部管理等功能的综合性APP；
+									三氢创康APP是瑞联集团专门为方便三氢创康会员购买公司产品，训练营等各项产品的在线指导工具。
+									</marquee>							              								  		  
+							</td>
+			 </tr>
+		</div>
+		<div class="bottom">Copyright &copy; <script>// <![CDATA[
+                 document.write(new Date().getFullYear());
+                 // ]]></script> 瑞联集团 <a href="/jx/"title="ReYi · Time | Desktop Wallpaper">ReYi · Time</a></div>
+				 <!-- 用于包含二维码所有的内容，显示在页面中的底部 -->
+				     <div id="box">
+				         <!-- 用于显示微信图标 -->
+				         <div id="wechat">
+				             <!-- 用于显示，隐藏二维码图片 -->
+				             <div id="code"></div>
+				         </div>
+				     </div><!-- 用于包含二维码所有的内容，显示在页面中的底部 -->
+	    </div>
+</div> 
+
+<!-- Javascript -->
+
+<script src="js/supersized.3.2.7.min.js"></script>
+<script src="js/supersized-init.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

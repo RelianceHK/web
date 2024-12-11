@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>瑞联周年庆 - 新闻轮播优化示例</title>
+		<!-- 引入 jQuery 库 -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<style>
+			/* 基础样式 */
+			body {
+				font-family: Arial, sans-serif;
+				display: flex;
+				justify-content: center;
+				padding: 20px;
+			}
+
+			/* 轮播外框 */
+			.box {
+				position: relative;
+				width: 100%;
+				max-width: 800px;
+				margin: auto;
+				overflow: hidden;
+				border: 1px solid #ccc;
+				border-radius: 8px;
+			}
+
+			/* 新闻容器样式 */
+			.news-slider {
+				display: flex;
+			}
+
+			/* 单条新闻样式 */
+			.news-item {
+				display: none;
+				width: 100%;
+				padding: 20px;
+				box-sizing: border-box;
+				transition: opacity 1s;
+				cursor: pointer;
+				display: flex;
+				gap: 20px;
+			}
+
+			/* 激活状态的新闻 */
+			.news-item.active {
+				display: flex;
+				opacity: 1;
+			}
+
+			/* 左侧图片样式 */
+			.news-item img {
+				width: 180px;
+				height: 180px;
+				border-radius: 10px;
+				object-fit: cover;
+				position: relative;
+			}
+
+			/* 图片内文字说明 */
+			.img-caption {
+				position: absolute;
+				bottom: 10px;
+				left: 0;
+				width: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+				color: white;
+				font-size: 14px;
+				padding: 5px;
+				text-align: center;
+				border-radius: 0 0 10px 10px;
+			}
+
+			/* 右侧内容布局 */
+			.news-content {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			/* 标题和日期 */
+			.news-header {
+				font-weight: bold;
+				font-size: 20px;
+			}
+
+			.news-date {
+				color: #777;
+				font-size: 14px;
+				margin-top: 5px;
+			}
+
+			/* 新闻简介 */
+			.news-summary {
+				font-size: 16px;
+				color: #333;
+				margin: 10px 0;
+			}
+
+			/* 发布来源样式 */
+			.news-source {
+				color: #888;
+				font-size: 14px;
+				text-align: right;
+			}
+
+			/* 导航按钮 */
+			button.prev,
+			button.next {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: rgba(0, 0, 0, 0.5);
+				color: #fff;
+				border: none;
+				padding: 10px;
+				cursor: pointer;
+				font-size: 16px;
+			}
+
+			button.prev {
+				left: 10px;
+			}
+
+			button.next {
+				right: 10px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="box">
+			<div class="news-slider">
+				<!-- 单条新闻项 -->
+				<a href="https://www.example.com/full-news-1" target="_blank" class="news-item active">
+					<!-- 左侧图片 -->
+					<div class="news-image">
+						<img src="https://reliancejk.com/upfile/RL-24s.jpg" style="height:30; width:30;"
+							alt="News 1 Image">
+						<div class="img-caption">图片说明1</div>
+					</div>
+					<!-- 右侧内容 -->
+					<div class="news-content">
+						<!-- 标题和发布日期 -->
+						<div>
+							<div class="news-header">新闻标题 1</div>
+							<div class="news-date">发布日期：2023-01-01</div>
+						</div>
+						<!-- 新闻简介 -->
+						<div class="news-summary">
+							这是新闻内容1的简要说明，<br>让读者了解新闻的主要内容...
+							这是新闻内容1的简要说明，<br>让读者了解新闻的主要内容...
+							这是新闻内容1的简要说明，<br>让读者了解新闻的主要内容...
+							这是新闻内容1的简要说明，<br>让读者了解新闻的主要内容...
+						</div>
+						<!-- 发布来源 -->
+						<div class="news-source">来源：示例网站</div>
+					</div>
+				</a>
+
+				<!-- <!-- 其他新闻项 -->
+				<!--<a href="https://www.example.com/full-news-2" target="_blank" class="news-item">
+					<div class="news-image">
+						<img src="https://reliancejk.com/upfile/20200819182617_208.png" style="height:30; width:30;"
+							alt=" News 2 Image">
+						<div class="img-caption">图片说明2</div>
+					</div>
+					<div class="news-content">
+						<div>
+							<div class="news-header">新闻标题 2</div>
+							<div class="news-date">发布日期：2023-02-01</div>
+						</div>
+						<div class="news-summary">这是新闻内容2的简要说明，<br>概述内容和相关要点...</div>
+						<div class="news-source">来源：示例网站</div>
+					</div>
+				</a>
+				<a href="https://www.example.com/full-news-3" target="_blank" class="news-item">
+					<div class="news-image">
+						<img src="https://via.placeholder.com/180" alt="News 3 Image">
+						<div class="img-caption">图片说明3</div>
+					</div>
+					<div class="news-content">
+						<div>
+							<div class="news-header">新闻标题 3</div>
+							<div class="news-date">发布日期：2023-03-01</div>
+						</div>
+						<div class="news-summary">这是新闻内容3的简要说明，<br>供用户快速浏览...</div>
+						<div class="news-source">来源：示例网站</div>
+					</div>
+				</a>
+  -->
+			</div>
+
+			<!-- 导航按钮 -->
+			<button class="prev">上一条</button>
+			<button class="next">下一条</button>
+		</div>
+
+		<script>
+			$(document).ready(function() {
+				let currentIndex = 0;
+				const newsItems = $(".news-item");
+				const itemCount = newsItems.length;
+				let autoSlideInterval;
+
+				// 显示特定新闻项
+				function showNewsItem(index) {
+					newsItems.removeClass("active").eq(index).addClass("active");
+				}
+
+				// 下一项
+				function nextNewsItem() {
+					currentIndex = (currentIndex + 1) % itemCount;
+					showNewsItem(currentIndex);
+				}
+
+				// 上一项
+				function prevNewsItem() {
+					currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+					showNewsItem(currentIndex);
+				}
+
+				// 自动轮播
+				function startAutoSlide() {
+					autoSlideInterval = setInterval(nextNewsItem, 5000);
+				}
+
+				function stopAutoSlide() {
+					clearInterval(autoSlideInterval);
+				}
+
+				// 初始化
+				showNewsItem(currentIndex);
+				startAutoSlide();
+
+				// 手动切换按钮
+				$(".next").click(function() {
+					stopAutoSlide();
+					nextNewsItem();
+					startAutoSlide();
+				});
+
+				$(".prev").click(function() {
+					stopAutoSlide();
+					prevNewsItem();
+					startAutoSlide();
+				});
+
+				// 悬停暂停
+				$(".box").hover(stopAutoSlide, startAutoSlide);
+			});
+		</script>
+
+	</body>
+</html>

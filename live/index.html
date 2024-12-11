@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!-- 元标签-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- 描述-->
+   <meta name="description" content="瑞联集团·新媒体中心成立于2020年，作为集团在数字化时代传播与沟通的核心力量，一直致力于以创新、高效和精准的方式传递集团的价值、理念与动态。
+		新媒体中心拥有一支充满激情、富有创意且专业素养过硬的团队，成员涵盖了内容策划、文案撰写、视觉设计、视频制作、新媒体直播、社交媒体运营等多个领域的精英。
+		我们秉持着“创新驱动、内容为王”的理念，深入挖掘集团的亮点与特色，通过多元化的新媒体平台，包括但不限于微信公众号、微博、抖音、小红书等，为广大受众提供丰富、有深度、有趣味的信息。
+		无论是集团的重大战略决策、业务拓展成果，还是员工风采、社会责任担当，新媒体中心都能以生动鲜活的形式呈现，增强集团的品牌影响力和社会美誉度。
+		同时，新媒体中心密切关注行业动态和市场趋势，不断探索新的传播手段和策略，以适应快速变化的新媒体环境。
+		我们注重与用户的互动交流，倾听用户的声音，及时反馈和解决问题，致力于打造一个开放、包容、互动性强的传播生态。
+		在未来的发展中，瑞联集团新媒体中心将继续紧跟时代步伐，不断提升自身能力，为集团的发展提供更强大的舆论支持和品牌助力，成为集团与社会各界沟通的重要桥梁和纽带。">
+   <!--关键字 -->
+   <meta name="keywords" content="瑞联,瑞联新媒体，瑞联集团新媒体中心，creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, masonry, grid, faq">
+    <!-- 页面标题 -->
+    <title>瑞联新媒体·音视频服务</title>
+    <!-- Favicon  <link rel="icon" href="favicon.png"> -->
+    <link rel="icon" href="data:image/x-icon;base64,AAABAAEAMDAAAAEAIACoJQAAFgAAACgAAAAwAAAAYAAAAAEAIAAAAAAAACQAABILAAASCwAAAAAAAAAAAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v7+//39/v/+/f7//v3+//79/v/+/f7//v3+//79/v/9/f7//v7//////////////v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+/v7//v7+///////////////////////////////////////////////////////+/v7///////////////////////////////////////////////////////7+/v////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7+/v//////8O31/+Lb6//k3u3/5N3t/+Td7f/k3e3/5N3s/+Xf7f/f2Or/8O31///////+/v7/8vLy/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//8PDw//z8/P///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v7+///////y7/b/aEWa/0cchP9NJIj/TCKH/0wih/9MIof/TSSI/0kfhf9WL47/5+Hu///////i4uP/mZmZ/5mZmf+ZmZn/mZmZ/5mZmf+ZmZn/mZmZ/5mZmf+ampr/lJSU/83Nzf///////f39/////////////////////////////////////////////////////////////////////////////////////////////////////////////fz+//////+Ga67/PA18/0whh/9JHoX/SR6G/0kehv9JHob/TCGH/z0Pff+9rdP///////f29/+lpaX/k5OT/5mZmf+YmJj/mJiY/5iYmP+YmJj/mJiY/5iYmP+YmJj/l5eX/5aWlv/p6en///////7+/v/////////////////////////////////////////////////////////////////////////////////////////////////8/P3//////76v0/9AE3//TSKI/0oghv9KIIb/SiCG/0ofhv9OI4j/PxF+/4ltsP///////////8DAwP+RkZH/mpqa/5iYmP+YmJj/mJiY/5iYmP+YmJj/mJiY/5iYmP+YmJj/mpqa/5SUlP+qqqr/+/v7//////////////////////////////////////////////////////////////////////////////////////////////////79/v//////5d7t/1MrjP9HG4T/SyCH/0ofhv9KH4b/Sh+G/0whh/9EF4L/ZUGY//Xz+P//////2dnZ/5OTk/+ZmZn/mJiY/5iYmP+YmJj/mJiY/5iYmP+ZmZn/mJiY/5iYmP+YmJj/mJiY/5qamv+QkJD/vr6+///////+/v7///////////////////////////////////////////////////////////////////////////////////////7+/v//////dlaj/z8Sf/9NI4j/Sh+G/0ofhv9KH4b/Sh+G/0sgh/9EGIL/0MXf///////w8PH/nZ2d/5aWlv+ZmZn/mJiY/5iYmP+YmJj/mJiY/5eXl/+Wlpb/mZmZ/5iYmP+YmJj/mJiY/5iYmP+ZmZn/k5OT/97e3v///////v7+/////////////////////////////////////////////////////////////////////////////Pv9//////+nksT/PQ99/00jiP9KH4b/Sh+G/0ofhv9KH4b/TSOI/z0Pff+eiL7///////39/v+zs7P/kpKS/5qamv+YmJj/mJiY/5iYmP+YmJj/l5eX/5ycnP+hoaH/lpaW/5mZmf+YmJj/mJiY/5iYmP+ZmZn/lpaW/6CgoP/09PT///////7+/v/////////////////////////////////////////////////////////////////9/f7//////9bN5P9HHYT/Sh+G/0oghv9KH4b/Sh+G/0ofhv9NIoj/QBOA/3ZWo//8/P3//////83Nzf+RkZH/mpqa/5iYmP+YmJj/mJiY/5iYmP+ampr/j4+P/8/Pz//n5+f/kpKS/5mZmf+YmJj/mJiY/5iYmP+YmJj/mpqa/5KSkv+1tbX///////7+/v////////////////////////////////////////////////////////////7+////////9PL4/2VBmP9DF4H/TCKH/0ofhv9KH4b/Sh+G/0sgh/9IHYX/TyaJ/+Lb6///////5ubn/5aWlv+YmJj/mJiY/5iYmP+YmJj/mJiY/5mZmf+Tk5P/ra2t//z8/P//////xMTE/5CQkP+ampr/mJiY/5iYmP+YmJj/mJiY/5qamv+QkJD/0dHR///////9/f3///////////////////////////////////////////////////////z8/f//////j3W0/zwOff9OI4j/Sh+G/0ofhv9KH4b/Sh+G/00iiP8+EH7/t6bP///////5+Pr/p6en/5SUlP+ZmZn/mJiY/5iYmP+YmJj/mZmZ/5eXl/+ZmZn/7Ozs///////+/v7/+/v7/6ysrP+Tk5P/mZmZ/5iYmP+YmJj/mJiY/5iYmP+YmJj/mJiY/+vr6////////v7+/////////////////////////////////////////////fz9///////GuNn/QxeB/0whh/9KH4b/Sh+G/0ofhv9KH4b/TSOI/z4Rfv+Haq7////////////FxcX/kZGR/5qamv+YmJj/mJiY/5iYmP+YmJj/mZmZ/5KSkv/T09P//////+/s9P/k3uz//////+vr6/+ZmZn/l5eX/5iYmP+YmJj/mJiY/5iYmP+ZmZn/k5OT/62trf/8/Pz////////////////////////////////////////////+/f7//////+bg7v9ULI3/RxuE/0shh/9KH4b/Sh+G/0ofhv9MIYf/RRmC/145k//x7vX//////9ra2/+Tk5P/mZmZ/5iYmP+YmJj/mJiY/5iYmP+ampr/kZGR/7q6uv///////////5R7t/9lQZj//Pz9///////S0tL/kZGR/5qamv+YmJj/mJiY/5iYmP+YmJj/mpqa/5CQkP/Dw8P///////7+/v/////////////////////////////////9/f7//////3tbpv8+EX7/TSOI/0ofhv9KH4b/Sh+G/0ofhv9LIIf/QxeB/8zA3P//////8vHz/56env+Wlpb/mZmZ/5iYmP+YmJj/mJiY/5mZmf+VlZX/oKCg//Pz9P//////zsPe/0Yag/88Dn3/n4i+///////+/f//s7Oz/5GRkf+ampr/mJiY/5iYmP+YmJj/mJiY/5mZmf+Tk5P/4ODg///////+/v7///////////////////////z8/f//////rpvJ/z8Rfv9NI4j/Sh+G/0ofhv9KH4b/Sh+G/00jiP89D33/ln65/////////v//uLi4/5KSkv+ampr/mJiY/5iYmP+YmJj/mJiY/5mZmf+VlZX/4ODg///////z8ff/Yz6X/0UZgv9MIof/RxyE/87D3v//////8fHy/6CgoP+Wlpb/mZmZ/5iYmP+YmJj/mJiY/5mZmf+VlZX/pKSk//f39////////v7+/////////////f3+///////f1+n/TCGH/0kehf9LIIb/Sh+G/0ofhv9KH4b/TCKI/0EUgP9tTJ7/+/r8///////Pz8//kZGR/5qamv+YmJj/mJiY/5iYmP+YmJj/mpqa/5CQkP/Gxsb///////////+IbK//PhB+/00jiP9MIYf/RBiC/1w1kv/x7vX//////9/f3/+Tk5P/mpqa/5mZmf+ZmZn/mZmZ/5mZmf+bm5v/kpKS/7m5uf///////v7+///////+/v////////n4+/9qR5v/QhaB/0wiiP9KH4b/Sh+G/0ofhv9LIIb/SB2F/0wih//b0+f//////+rq6/+YmJj/mJiY/5iYmP+YmJj/mJiY/5iYmP+ZmZn/lJSU/6mpqf/5+fr//////7ys0v8/En7/TSKI/0ofhv9KH4b/TSOI/z4Rfv+LcbH///////////+/v7//jo6O/5WVlf+UlJT/lJSU/5SUlP+UlJT/lpaW/42Njf/R0dH///////7+/v/8/P3//////5R7t/88Dn3/TiSJ/0ofhv9KH4b/Sh+G/0ofhv9MIof/QBN//7Cdyv//////+/r8/6qqqv+UlJT/mZmZ/5iYmP+YmJj/mJiY/5iYmP+YmJj/mJiY/+np6v//////5uDt/1Aniv9IHYX/SyCH/0ofhv9KH4b/Sh+G/0wih/9AE3//va3T///////39vj/tra2/6enp/+qqqr/qqqq/6qqqv+qqqr/qqqq/6ioqP+tra3/9fX1///////9/P3//////7Cdyv8+EX7/TCKI/0ofhv9KH4b/Sh+G/0ofhv9MIof/QROA/5V8uP////////7//7q6uv+SkpL/mpqa/5iYmP+YmJj/mJiY/5iYmP+ZmZn/lZWV/9ra2///////8e71/2A7lP9EGIL/TCGH/0ofhv9KH4b/Sh+G/0sgh/9HHIT/USiL/+Xf7f///////v3+///////////////////////////////////////9/f3//f39/////////////v7+//////+Iba//PxJ//00jiP9KH4b/Sh+G/0ofhv9KH4b/SyCH/0ATf//BstX///////X09f+ioqL/lZWV/5mZmf+YmJj/mJiY/5iYmP+ZmZn/lpaW/52dnf/v7/D//////8/E3/9FGYP/SyCG/0oghv9KH4b/Sh+G/0ofhv9NIoj/QBN//3RUov/+/v7//f3+/////////////////////////////////////////////////////////////v7////////29Pn/YDqU/0QYgv9MIYf/Sh+G/0ofhv9KH4b/SyGH/0Yag/9VLo7/6OPv///////i4uP/lZWV/5iYmP+YmJj/mJiY/5iYmP+YmJj/mpqa/5GRkf+1tbX///////////+jjcH/PQ99/00jiP9KH4b/Sh+G/0ofhv9KH4b/TSOI/z0Pff+qlsb///////z7/f////////////////////////////////////////////////////////////38/f//////y7/c/0QYgv9LIIf/Sh+G/0ofhv9KH4b/Sh+G/00jiP9AEn//eFik/////v//////ycjJ/5GRkf+ampr/mJiY/5iYmP+YmJj/mJiY/5qamv+SkpL/zs7O///////9/f3/dFSi/0ATf/9NIoj/Sh+G/0ofhv9KH4b/SyCG/0ofhv9JHoX/1Mri///////9/f7////////////////////////////////////////////////////////////8/P3//////5qDvP88Dn3/TiOI/0ofhv9KH4b/Sh+G/0ofhv9NI4j/PhB+/6iUxf//////+/v8/62trf+Tk5P/mpqa/5iYmP+YmJj/mJiY/5iYmP+YmJj/lpaW/+Xl5v//////49zr/1Eoiv9IHIX/SyCH/0ofhv9KH4b/Sh+G/0wih/9DF4H/XzqU//Xy+P///////v7////////////////////////////////////////////////////////+/v////////n4+/9tS57/QRSA/00iiP9KH4b/Sh+G/0ofhv9LIIb/SR6G/0ofhv/d1uj//////+vr7P+ampr/l5eX/5mZmf+YmJj/mJiY/5iYmP+ZmZn/lJSU/6qqqv/6+fv//////7SizP89EH7/TSKI/0ofhv9KH4b/Sh+G/0ofhv9OI4j/PRB+/5R6t////////fz9/////////////////////////////////////////////////////////////f3+///////g2er/TyaJ/0kdhf9LIIf/Sh+G/0ofhv9KH4b/TCKH/0MXgf9pRpr/9fP4///////W1tb/kpKS/5mZmf+YmJj/mJiY/5iYmP+YmJj/mpqa/5GRkf/BwcH///////////+LcLH/PhB+/08lif9MIYf/TCGH/0whh/9MIof/TiSI/0MXgf/FuNj///////38/v////////////////////////////////////////////////////////////z7/f//////sJ3K/zwOff9NI4j/Sh+G/0ofhv9KH4b/Sh+G/00jiP88Dn3/l365////////////tra2/5GRkf+ampr/mJiY/5iYmP+YmJj/mJiY/5mZmf+SkpL/3Nvc///////v7PT/WjSR/zwOff9DFoH/QRSA/0EUgP9BFID/QxaB/z4Rfv9JH4X/5N3t///////+/f7////////////////////////////////////////////////////////////+/f7//////4Fkq/8/EX7/TSOI/0ofhv9KH4b/Sh+G/0ofhv9MIYf/QxaB/8m82v//////8/Lz/6CgoP+VlZX/mZmZ/5iYmP+YmJj/mJiY/5mZmf+Wlpb/oKCg//Ly8///////zMDd/21Knf90U6L/c1Gh/3NRof9zUaH/clGh/3VVo/9pRZr/o47B///////9/f7////////////////////////////////////////////////////////////+/v7///////Ht9f9dN5P/RRmD/0whh/9KH4b/Sh+G/0ofhv9LIYf/RhqD/1gxj//q5fD//////+Li4v+VlZX/mJiY/5iYmP+YmJj/mJiY/5iYmP+ampr/kZGR/7e3t////////v3+/////////////////////////////////////////////fz9///+/////////////////////////////////////////////////////////////////////////Pz9///////FuNn/QRWA/0whh/9KH4b/Sh+G/0ofhv9KH4b/TSOI/z4Rfv+AY6r////////////ExMT/kZGR/5qamv+YmJj/mJiY/5iYmP+YmJj/mpqa/5GRkf/Q0ND///////z8/f/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7///////////////////////////////////////////////////////////////////////////////////////z8/f//////lXy4/zwOff9NI4j/Sh+G/0ofhv9KH4b/Sh+G/00jiP89EH7/sZ/L///////6+fv/qqqq/5OTk/+ZmZn/mJiY/5iYmP+YmJj/mJiY/5eXl/+YmJj/6urq///////+/v7///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7+////////+Pf6/2pHm/9CFYH/TCKH/0ofhv9KH4b/Sh+G/0sgh/9IHYX/TyaK/+Lb6///////6enp/5mZmf+Xl5f/mJiY/5iYmP+YmJj/mJiY/5mZmf+Tk5P/rKys//7+/v/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9/f7//////9vS5/9KIIb/SiCG/00iiP9MIYf/TCGH/0whh/9OJIn/RBeC/21Lnf/5+Pr//////9LR0v+RkZH/mpqa/5mZmf+ZmZn/mZmZ/5mZmf+bm5v/kpKS/8PDw////////v7+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Pv9//////+um8j/OAl6/0QXgv9CFYD/QhWA/0IVgP9BFID/RRmD/zMDd/+Terf///////////+2tbb/jo6O/5SUlP+Tk5P/k5OT/5OTk/+Tk5P/lJSU/46Ojv/c3Nz///////7+/v////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7+///9/P7/kHa1/2tInP9yUaH/cU+g/3FPoP9xT6D/cU+g/3FPoP9vTZ//4tzr///////v7u//r6+v/66urv+urq7/rq6u/66urv+urq7/r6+v/6urq/+5ubn//f39///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+/f7////////////////////////////////////////////+/v7//fz9///////+/v7////////////////////////////////////////////+/v7//v7+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v///f3+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v///////////////////v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=">
+    <!-- Bundle -->
+    <link rel="stylesheet" href="static/css/bundle.min.css">
+    <!-- 插件Css-->
+    <link rel="stylesheet" href="static/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="static/css/swiper.min.css">
+
+    <link rel="stylesheet" href="static/css/cubeportfolio.min.css">
+    <!--旋转滑块CSS文件 -->
+    <link rel="stylesheet" href="static/css/navigation.css">
+    <link rel="stylesheet" href="static/css/settings.css">
+    <!--切片CSS文件 -->
+    <link rel="stylesheet" href="static/css/slick.css">
+    <link rel="stylesheet" href="static/css/slick-theme.css">
+    <!-- 样式表-->
+    <link rel="stylesheet" href="static/css/style.css">
+    <!--自定义样式CSS文件-->
+    <link rel="stylesheet" href="static/css/custom.css">
+</head>
+<body data-spy="scroll" data-target=".navbar-nav" data-offset="90">
+
+<!-- 开屏动画 -->
+<div class="loader" id="loader-fade">
+        <div class="dot-container">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="goo">
+                    <fegaussianblur in="SourceGraphic" stddeviation="10" result="blur"></fegaussianblur>
+                    <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7"></fecolormatrix>
+                </filter>
+            </defs>
+        </svg>
+</div>
+<!-- Loader ends -->
+
+<!-- 标题开始 -->
+<section class="top-header cursor-light">
+    <div class="row no-gutters">
+        <div class="col-6 col-lg-4">
+            <div class="slider-icons">
+            </div>
+        </div>
+        <div class="col-6 col-lg-4 d-flex align-items-center justify-content-end justify-content-lg-center">
+            
+        </div>
+        <div class="col-4 d-flex justify-content-end">
+            <a href="tel:13732562726" class="btn-setting link btn-hvr-up btn-hvr-whatsapp color-white mr-lg-4 d-none d-lg-inline-block">
+			<i class="fab fa-whatsapp"></i>137-3256-2726</a>
+        </div>
+    </div>
+</section>
+<header class="cursor-light">
+    <nav class="navbar navbar-top-default navbar-expand-lg nav-three-circles bottom-nav nav-box-shadow no-animation">
+        <div class="container-fluid">
+            <a class="logo ml-lg-1" href="index.html">
+                <img src="RLXMT-TV-logo-2022.png" width="100" height="100" class="logo-default" alt="logo" title="Logo">
+            </a>
+            <div class="collapse navbar-collapse d-none d-lg-block">
+                <ul class="nav navbar-nav mx-auto">
+                    <li class="nav-item"> <a href="index.html#home" class="scroll nav-link link">首页</a></li>
+                    <li class="nav-item"> <a href="index.html#about" class="scroll nav-link link">简介</a></li>
+                    <li class="nav-item"> <a href="index.html#work" class="scroll nav-link link">使用教程</a></li>
+                    <li class="nav-item"> <a href="index.html#blog" class="scroll nav-link link">联系方式</a></li>
+                </ul>
+            </div>
+            <a href="tel:13732562726" class="nav-btn-number btn-setting btn-hvr-up btn-hvr-whatsapp color-white mr-lg-3">
+            <a href="tel:13732562726" class="nav-btn-number btn-setting btn-hvr-up btn-hvr-whatsapp color-white mr-lg-3">
+			<i class="fab fa-whatsapp"></i>137-3256-2726</a>
+            <!--侧菜单打开按钮-->
+            <div class="menu-btn">
+            <a class="menu_bars menu-bars-setting animated-wrap sidemenu_toggle">
+                <div class="menu-lines animated-element">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+            </div>
+            <!-- 侧面菜单 -->
+        </div>
+    </nav>
+    <!-- 侧菜单打开按钮-->
+    <!-- 侧面菜单-->
+    <div class="side-menu center">
+        <div class="quarter-circle">
+            <div class="menu_bars2 active" id="btn_sideNavClose">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="inner-wrapper justify-content-center">
+            <div class="col-md-12 text-center">
+                <a href="index.html" class="logo-full mb-4">
+				<img src="RLXMT-live.png" alt="logo-pure-white.png"></a>
+            </div>
+            <nav class="side-nav m-0">
+                <ul class="navbar-nav flex-lg-row">
+                    <li class="nav-item"> <a href="index.html#home" class="scroll nav-link link">首页</a></li>
+                    <li class="nav-item"> <a href="index.html#about" class="scroll nav-link link">简介</a></li>
+                    <li class="nav-item"> <a href="index.html#work" class="scroll nav-link link">使用教程</a></li>
+                    <li class="nav-item"> <a href="index.html#blog" class="scroll nav-link link">联系方式</a></li>
+                </ul>
+            </nav>
+
+            <div class="side-footer text-white w-100">
+                <p class="text-white">&copy; Copyright <script>// <![CDATA[
+                 document.write(new Date().getFullYear());
+                 // ]]></script>  <a href="https://live.reliancejk.com/" title="瑞联集团·新媒体中心">reliancejk.com</a> All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <a id="close_side_menu" href="javascript:void(0);"></a>
+    <!--侧面菜单-->
+</header>
+<!-- Header end -->
+
+<!-- 主要部分开始 -->
+<section id="home" class="p-0 h-100vh cursor-light">
+    <h2 class="d-none">heading</h2>
+	
+				
+    <!--主滑块-->
+    <div id="rev_slider_8_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="weone" data-source="gallery" style="background:transparent;padding:0px;">
+        <!-- 启动旋转滑块5.4.8.1全屏模式 -->
+        <div id="rev_slider_8_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.8.1">
+            <ul><!-- 幻灯片  -->
+                <!-- 幻灯片 1 -->
+                <li data-index="rs-36" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- 层 -->
+                    <img src="static/picture/slider-img.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" alt="slider-image" data-no-retina="">
+                    <div class="banner-overlay"></div>
+                    <!-- 视频图层 -->
+                    <div class="rs-background-video-layer" data-forcerewind="on" data-volume="mute" data-videowidth="100%" data-videoheight="100vh" data-videomp4="static/video/slider-video.mp4" data-videopreload="auto" data-videoloop="loopandnoslidestop" data-forcecover="1" data-aspectratio="16:9" data-autoplay="true" data-autoplayonlyfirsttime="false"></div>
+                    <!-- 页首文字图层 -->
+                    <div class="tp-caption color-yellow" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['270','200','100','15']" data-fontsize="['60','50','40','40']" data-lineheight="['75','75','75','40']" data-width="['556','556','556','300']" data-height="['none','none','none','87']" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":100,"split":"chars","splitdelay":0.1,"speed":1480,"split_direction":"random","frame":"0","from":"y:50px;sX:1;sY:1;opacity:0;fb:20px;","color":"rgba(0,0,0,0)","to":"o:1;fb:0;","ease":"Power4.easeInOut"},{"delay":"wait","speed":350,"frame":"999","color":"transparent","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]' data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10; min-width: 556px; max-width: 556px; white-space: nowrap; font-size: 60px; line-height: 75px; font-weight: 300; letter-spacing: 0px;font-family: 'Montserrat', sans-serif;">
+					<img src="RLXMT-live.png" width="220px" height="60px" class="link" alt="logo"></div>
+
+
+                    <!-- 图层文字 -->
+                    <div class="tp-caption color-white" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['368','260','155','105']" data-fontsize="['62','50','40','40']" data-lineheight="['75','75','45','45']" data-width="['556','556','556','350']" data-height="['none','none','none','87']" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":150,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10; min-width: 556px; max-width: 556px; white-space: nowrap; font-weight: 500; letter-spacing: 0px;font-family: 'Montserrat', sans-serif;"><div id="js-rotating">srt低延时(无需公网IP), rtmp
+                   直播标准协议, webrtc超低延时 </div> </div>
+
+                    <!-- LAYER Text -->
+                    <div class="tp-caption color-white" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','middle','middle','middle']" data-voffset="['470','95','0','20']" data-whitespace="normal" data-width="['580','630','550','440']" data-fontsize="['20','15','15','15']" data-lineheight="['30','25','22','22']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":100,"speed":1480,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":350,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10; min-width: 650px; max-width: 650px; white-space: nowrap; font-weight: 300; letter-spacing: 1px;font-family: 'Source Sans Pro', sans-serif;">这是一个简单高效的实时视频服务器，支持RTMP/WebRTC/HLS/HTTP-FLV/SRT。
+                    </div>
+
+                    <!-- LAYER按钮 -->
+                    <div class="tp-caption tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['170','200','90','120']" data-frames='[{"from":"y:50px;opacity:0;","speed":1000,"to":"o:1;","delay":800,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[175%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:2px 2px 2px 2px;"}]' data-textalign="['center','center','center','center']" data-width="['160','160','160','160']" style="z-index: 10; min-width: 960px; max-width: 960px">
+                        <!--a href="" class="btn-setting color-white btn-hvr-up btn-hvr-yellow link">点击查看推流状态</a-->
+                         
+                    </div>
+
+
+                </li>
+            </ul>
+
+            <div class="tp-bannertimer" style="height: 5px; background: rgba(0,0,0,0.15);"></div>	</div>
+    </div>
+    <!--主滑块末端 -->
+
+</section>
+<!-- 主要部分结束 -->
+
+<!--简介-->
+<section class="about overflow-visible bg-dark1" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 pr-5 mb-5 mb-lg-0 wow fadeInLeft">
+                <div class="rare-box"></div>
+                <img src="static/photo/srs4map.png" class="about-img-small position-relative w-100" alt="">
+            </div>
+            <div class="col-lg-6 pl-6">
+                <div class="main-title text-lg-left offset-md-1 mb-0 wow fadeInUp" data-wow-delay="300ms">
+                    <h2 class="wow fadeInUp font-weight-light" data-wow-delay="400ms">商业直播<span class="color-pink">超低延时+点对多点</span>推拉流服务</h2>
+                    <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">超清实时直播，指码率很高（测试过2~8Mbps），延迟很低（200~500ms）且无累计延迟的直播。可应用的具体场景包括不限于以下场景：</br> 1.超高清视频会议，使用专业导播台，把直播流投屏到大屏，注意需要专门的硬件做降噪和回声消除；</br>2.远距离和弱网推流直播，比如跨国推流，注意推RTMP后并不使用SRT播放而是普通直播播放（HTTP-FLV/HLS/WebRTC）；</br>3.远程制作和导播，户外直播用手机或摄像头推流到本服务器，用OBS/vMix/芯象制作后再播出，编辑不用在直播现场。</br>4.多个会场连线。
+                    <ul class="pb-5 text-left wow fadeInUp" data-wow-delay="600ms">
+                        <li>延迟和每个环节都相关。</li>
+                        <li>支持协议转换，例如推srt流拉rtmp流。</li>
+                        <li>srt点对多点是为了实现超低延时同时又满足多个拉流的需求。</li>
+                        <li>推荐使用<a href="http://www.sinsam.com/" target="_blank" rel="noreferrer">芯象直播</a>推流，其次是<a href="https://obsproject.com/download" target="_blank" rel="noreferrer">OBS</a>和<a href="https://www.vmix.com/" target="_blank" rel="noreferrer">vMix</a></li>
+                        <li>推荐使用<a href="https://www.vmix.com/" target="_blank" rel="noreferrer">vMix</a>拉流，其次是<a href="http://www.sinsam.com/" target="_blank" rel="noreferrer">芯象直播</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--简介结束-->
+
+<!-- 关于方框开始 -->
+<section class="bg-dark2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-title wow fadeIn" data-wow-delay="300ms">
+                    <h2>常见的推流<span class="color-pink">协议</span><br>解决方案<span class="color-blue">应用场景</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="about-box mb-5 mb-lg-0 mx-auto bg-blue">
+                    <h5 class="font-weight-500 color-white mt-25px mb-15px text-capitalize">RTMP</h5>
+                    <p class="font-weight-light color-white">最为常见的直播协议，兼容性好几乎所有的编码器和导播软硬件都支持这个协议，缺点是时延较高且会在直播过程中因为网络不稳定继续增加时延，本服务器已将时延降低至0.1秒（仅为服务器时延，此协议编解码一般会存在时延，不同的软硬件时延都不相同具体看厂商调校）</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="about-box mb-5 mb-lg-0 mx-auto bg-yellow">
+                    <h5 class="font-weight-500 color-white mt-25px mb-15px">SRT</h5>
+                    <p class="font-weight-light color-white">我认为是20世纪公网拉流直播最伟大的开源项目，完美解决了网络抖动较大的情况下依然能实现稳定低延时的直播，需要公网IP且只能点对点（早期：一人推流只能一人拉流），本服务器已解决公网IP需求用户无需公网IP也能实现srt超低时延推拉流，且实现点对多点，即一人推流多人拉流</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="about-box mb-0 mx-auto bg-pink">
+                    <h5 class="font-weight-500 color-white mt-25px mb-15px text-capitalize">WEBRTC</h5>
+                    <p class="font-weight-light color-white">能达到对话级别的超低时延解决方案，会议系统都是rtc的解决方案，例如zoom、腾讯会议等。PC端芯象推流 软件已经支持了webrtc的推拉流协议</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 关于方框结束 -->
+
+<!-- 使用教程 -->
+<section id="work" class="pb-0 bg-dark1">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-title wow fadeIn" data-wow-delay="300ms">
+                    <h2 class="mb-0">使用<span class="color-pink">教程</span> </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row d-block">
+            <div id="js-filters-mosaic-flat" class="cbp-l-filters-alignCenter">
+                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item cbp-filter-style">
+                    所有教程 <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".vmixsrt" class="cbp-filter-item cbp-filter-style">
+                    vmix推拉srt <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".vmixrtmp" class="cbp-filter-item cbp-filter-style">
+                    vmix推拉rtmp <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".xxsrt" class="cbp-filter-item cbp-filter-style">
+                    芯象推拉srt <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".xxrtmp" class="cbp-filter-item cbp-filter-style">
+                    芯象推拉rtmp <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".obssrt" class="cbp-filter-item cbp-filter-style">
+                    obs推拉srt <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".obsrtmp" class="cbp-filter-item cbp-filter-style">
+                    obs推拉rtmp <div class="cbp-filter-counter"></div>
+                </div>
+            </div>
+
+            <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat no-transition">
+                <div class="cbp-item vmixsrt">
+                    <a href="static/file/vmix_s_t.png" class="cbp-caption cbp-lightbox" data-title="vmix<br>srt推流设置">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="static/picture/vmix_s_t.png" alt="work">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">
+                                    <p>vmix</p></div>
+                                    <div class="cbp-l-caption-title">srt推流设置</div>
+                                    <span class="work-icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item vmixsrt">
+                    <a href="static/file/vmix_s_l.png" class="cbp-caption cbp-lightbox" data-title="vmix<br>srt拉流设置">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="static/picture/vmix_s_l.png" alt="work">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <p>vmix</p>
+                                    <div class="cbp-l-caption-title">srt拉流设置</div>
+                                    <span class="work-icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item xxsrt">
+                    <a href="static/file/xx_s_t.png" class="cbp-caption cbp-lightbox" data-title="芯象<br>srt推流设置">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="static/picture/xx_s_t.png" alt="work">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <p>芯象</p>
+                                    <div class="cbp-l-caption-title">srt推流设置</div>
+                                    <span class="work-icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item xxsrt">
+                    <a href="static/file/xx_s_l.png" class="cbp-caption cbp-lightbox" data-title="芯象<br>srt拉流设置">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="static/picture/xx_s_l.png" alt="work">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <p>芯象</p>
+                                    <div class="cbp-l-caption-title">srt拉流设置</div>
+                                    <span class="work-icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item obssrt">
+                    <a href="static/file/obs_s_t.png" class="cbp-caption cbp-lightbox" data-title="OBS<br>srt推流设置">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="static/picture/obs_s_t.png" alt="work">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <p>OBS</p>
+                                    <div class="cbp-l-caption-title">srt推流设置</div>
+                                    <span class="work-icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item obssrt">
+                    <a href="static/file/obs_s_l.jpg" class="cbp-caption cbp-lightbox" data-title="OBS<br>srt拉流设置">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="static/picture/obs_s_l.jpg" alt="work">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <p>OBS</p>
+                                    <div class="cbp-l-caption-title">srt拉流设置</div>
+                                    <span class="work-icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item vmixrtmp">
+                    <a href="static/file/vmix_r_t.png" class="cbp-caption cbp-lightbox" data-title="vmix<br>rtmp推流设置">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="static/picture/vmix_r_t.png" alt="work">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <p>vmix</p>
+                                    <div class="cbp-l-caption-title">rtmp推流设置</div>
+                                    <span class="work-icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item vmixrtmp">
+                    <a href="static/file/vmix_r_l.png" class="cbp-caption cbp-lightbox" data-title="vmix<br>rtmp拉流设置">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="static/picture/vmix_r_l.png" alt="work">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <p>vmix</p>
+                                    <div class="cbp-l-caption-title">rtmp拉流设置</div>
+                                    <span class="work-icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item xxrtmp">
+                    <a href="static/file/xx_r_t.png" class="cbp-caption cbp-lightbox" data-title="芯象<br>rtmp推流设置">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="static/picture/xx_r_t.png" alt="work">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <p>芯象</p>
+                                    <div class="cbp-l-caption-title">rtmp推流设置</div>
+                                    <span class="work-icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item xxrtmp">
+                    <a href="static/file/xx_r_l.png" class="cbp-caption cbp-lightbox" data-title="芯象<br>rtmp拉流设置">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="static/picture/xx_r_l.png" alt="work">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <p>芯象</p>
+                                    <div class="cbp-l-caption-title">rtmp拉流设置</div>
+                                    <span class="work-icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item obsrtmp">
+                    <a href="static/file/obs_r_t.jpg" class="cbp-caption cbp-lightbox" data-title="obs<br>rtmp推流设置">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="static/picture/obs_r_t.jpg" alt="work">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <p>obs</p>
+                                    <div class="cbp-l-caption-title">rtmp推流设置</div>
+                                    <span class="work-icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item obsrtmp">
+                    <a href="static/file/obs_r_l.png" class="cbp-caption cbp-lightbox" data-title="obs<br>rtmp拉流设置">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="static/picture/obs_r_l.png" alt="work">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <p>obs</p>
+                                    <div class="cbp-l-caption-title">rtmp拉流设置</div>
+                                    <span class="work-icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Work ends -->
+
+<!-- Clients start -->
+<section id="clients" class="bg-white p-0 cursor-light no-transition">
+    <h2 class="d-none">heading</h2>
+    <div class="section-padding parallax-setting parallaxie parallax2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-title wow fadeIn" data-wow-delay="300ms">
+                        <h2 class="mb-0"><span class="color-pink">案例</span></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-images">
+                <div class="owl-thumbs owl-dots d-lg-block d-none">
+                    <div class="owl-dot animated-wrap active"><img src="static/picture/testimonial1.png" alt="" class="animated-element"></div>
+                    <div class="owl-dot animated-wrap"><img src="static/picture/testimonial2.png" alt="" class="animated-element"></div>
+                    <div class="owl-dot animated-wrap"><img src="static/picture/testimonial3.png" alt="" class="animated-element"></div>
+                    <div class="owl-dot animated-wrap"><img src="static/picture/testimonial4.png" alt="" class="animated-element"></div>
+                    <div class="owl-dot animated-wrap"><img src="static/picture/testimonial5.png" alt="" class="animated-element"></div>
+                    <div class="owl-dot animated-wrap"><img src="static/picture/testimonial6.png" alt="" class="animated-element"></div>
+                    <div class="owl-dot animated-wrap"><img src="static/picture/testimonial7.jpg" alt="" class="animated-element"></div>
+                    <div class="owl-dot animated-wrap"><img src="static/picture/testimonial8.jpg" alt="" class="animated-element"></div>
+                </div>
+            </div>
+
+            <div class="row align-items-center position-relative">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme testimonial-two hide-cursor mx-auto wow zoomIn" data-wow-delay="400ms">
+                        <div class="testimonial-item">
+                            <p class="color-white testimonial-para mb-15px">    作为“康定女儿”的阿兰·达瓦卓玛，用自己的音乐和声音，让大众听到了高原的辽阔和藏族儿女的真挚深情，也让全世界开始了解康定这个实力与美貌并存的“情歌故乡”。
+本次四月八转山会，阿兰将与朋友所娜希沿康定城12个主题景点，开启一场3小时不间断的云直播活动，采用srt拉流的方式将7个机位4个景点交织在一起,实现实时主分会场互动直播效果。</p>
+                            <div class="testimonial-post">
+                                <a href="javascript:void(0)" class="post"><img src="static/picture/testimonial1.png" alt="image"></a>
+                                <div class="text-content">
+                                    <h5 class="color-white text-capitalize">阿兰·达瓦卓玛</h5>
+                                    <p class="color-white">康定·四月八转山会云直播</p>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--div class="testimonial-item hide-cursor">
+                            <p class="color-white testimonial-para mb-15px"> Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus. </p>
+
+                            <div class="testimonial-post">
+                                <a href="javascript:void(0)" class="post"><img src="static/picture/testimonial2.png" alt="image"></a>
+                                <div class="text-content">
+                                    <h5 class="color-white text-capitalize">Christina Williams</h5>
+                                    <p class="color-white"> HR Manager </p>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <p class="color-white testimonial-para mb-15px"> Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus. </p>
+                            <div class="testimonial-post">
+                                <a href="javascript:void(0)" class="post"><img src="static/picture/testimonial3.png" alt="image"></a>
+                                <div class="text-content">
+                                    <h5 class="color-white text-capitalize">Sarah Jones</h5>
+                                    <p class="color-white"> Sales Executive </p>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <p class="color-white testimonial-para mb-15px"> Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus. </p>
+                            <div class="testimonial-post">
+                                <a href="javascript:void(0)" class="post"><img src="static/picture/testimonial4.png" alt="image"></a>
+                                <div class="text-content">
+                                    <h5 class="color-white text-capitalize">Chris Gorgano</h5>
+                                    <p class="color-white"> Photographer </p>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <p class="color-white testimonial-para mb-15px"> Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus. </p>
+
+                            <div class="testimonial-post">
+                                <a href="javascript:void(0)" class="post"><img src="static/picture/testimonial5.png" alt="image"></a>
+                                <div class="text-content">
+                                    <h5 class="color-white text-capitalize">Kate Carter</h5>
+                                    <p class="color-white"> Model </p>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <p class="color-white testimonial-para mb-15px"> Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus. </p>
+
+                            <div class="testimonial-post">
+                                <a href="javascript:void(0)" class="post"><img src="static/picture/testimonial6.png" alt="image"></a>
+                                <div class="text-content">
+                                    <h5 class="color-white text-capitalize">Alex Curtis </h5>
+                                    <p class="color-white"> Manager </p>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <p class="color-white testimonial-para mb-15px"> Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus. </p>
+
+                            <div class="testimonial-post">
+                                <a href="javascript:void(0)" class="post"><img src="static/picture/testimonial7.jpg" alt="image"></a>
+                                <div class="text-content">
+                                    <h5 class="color-white text-capitalize">Ashley Wilson</h5>
+                                    <p class="color-white"> Actor </p>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <p class="color-white testimonial-para mb-15px"> Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus. </p>
+
+                            <div class="testimonial-post">
+                                <a href="javascript:void(0)" class="post"><img src="static/picture/testimonial8.jpg" alt="image"></a>
+                                <div class="text-content">
+                                    <h5 class="color-white text-capitalize">Johnny Perkins</h5>
+                                    <p class="color-white"> Athlete </p>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Clients ends -->
+
+<!-- Blog start -->
+<!--section id="blog" class="half-section p-0 bg-change bg-yellow">
+    <h2 class="d-none">heading</h2>
+    <div class="container-fluid">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 col-md-12 p-0">
+                <div class="hover-effect">
+                    <img alt="blog" src="static/picture/split-blog.jpg" class="about-img">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 p-lg-0">
+                <div class="split-container-setting style-three text-center">
+                    <div class="main-title mb-5 wow fadeIn" data-wow-delay="300ms">
+                        <h5 class="font-18 text-blue"> Oct 12, 2019</h5>
+                        <h2 class="mb-0 font-weight-normal"> Agency Blog </h2>
+                    </div>
+                    <p class="color-black mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodt temp to the incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis a nostr a exercitation ullamco laboris nisi ut aliquip.</p>
+
+                    <a href="javascript:;" class="btn-setting color-black btn-hvr-up btn-blue btn-hvr-pink">learn more</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Blog ends -->
+
+<!-- 联系方式和地图开始 -->
+<section id="blog" class="bg-light-gray bg-dark1">
+    <div class="container">
+        <div class="row mx-lg-0">
+            <div class="col-lg-6 col-md-6 col-sm-12 p-0">
+                <div class="contact-box bg-dark2">
+                    <div class="main-title text-center text-md-left mb-4">
+                        <h2 class="font-weight-normal">瑞联新媒体·音视频服务</h2>
+                    </div>
+                    <div class="text-center text-md-left">
+                        <p class="mb-3">实现多场景低延时推拉流服务，提供各种音视频解决方案。 </p>
+                        <p class="mb-3"> 微信/手机 : <a href="tel:13732562726" style="color: #ffffff;" >137-3256-2726</a><br>
+                            负责人 : <a href="https://choong.net" style="color: #ffffff;" title="虫虫物语 | 乐哥在线 choong.net">瑞联新媒体·氢乐哥</a> 
+						 <br>企业邮箱: <a href="mailto:me@choong.net" style="color: #ffffff;" class="color-white">zhangwei@reliancejk.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 页脚开始 -->
+<footer class="p-half  bg-dark2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">
+                <!--ul class="footer-icons mb-4">
+                    <li><a href="javascript:void(0)" class="wow fadeInUp facebook"><i class="fab fa-facebook-f"></i> </a> </li>
+                    <li><a href="javascript:void(0)" class="wow fadeInDown twitter"><i class="fab fa-twitter"></i> </a> </li>
+                    <li><a href="javascript:void(0)" class="wow fadeInUp google"><i class="fab fa-google"></i> </a> </li>
+                    <li><a href="javascript:void(0)" class="wow fadeInDown linkedin"><i class="fab fa-linkedin-in"></i> </a> </li>
+                    <li><a href="javascript:void(0)" class="wow fadeInUp instagram"><i class="fab fa-instagram"></i> </a> </li>
+                    <li><a href="javascript:void(0)" class="wow fadeInDown pinterest"><i class="fab fa-pinterest-p"></i> </a> </li>
+                </ul-->
+                <p class="copyrights mt-2 mb-2">&copy; Copyright <script>// <![CDATA[
+                 document.write(new Date().getFullYear());
+                 // ]]></script>  <a href="https://live.reliancejk.com/" title="瑞联集团·新媒体中心">瑞联新媒体中心</a> All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--动画光标-->
+<div id="animated-cursor">
+    <div id="cursor">
+        <div id="cursor-loader"></div>
+    </div>
+</div>
+<!--Animated Cursor End-->
+
+<!-- JavaScript -->
+<script src="static/js/bundle.min.js"></script>
+
+<!-- Plugin Js -->
+<script src="static/js/jquery.fancybox.min.js"></script>
+<script src="static/js/owl.carousel.min.js"></script>
+<script src="static/js/swiper.min.js"></script>
+<script src="static/js/jquery.cubeportfolio.min.js"></script>
+<script src="static/js/jquery.appear.js"></script>
+<script src="static/js/parallaxie.min.js"></script>
+<script src="static/js/wow.min.js"></script>
+<!-- Owl Carousel JS File -->
+<script src="static/js/owl.carousel.js"></script>
+<!-- Slick JS File -->
+<script src="static/js/slick.min.js"></script>
+<!-- Tween Max Animation File -->
+<script src="static/js/TweenMax.min.js"></script>
+<!-- Morphtext File -->
+<script src="static/js/morphext.min.js"></script>
+<!-- REVOLUTION JS FILES -->
+<script src="static/js/jquery.themepunch.tools.min.js"></script>
+<script src="static/js/jquery.themepunch.revolution.min.js"></script>
+<!-- SLIDER REVOLUTION EXTENSIONS -->
+<script src="static/js/revolution.extension.actions.min.js"></script>
+<script src="static/js/revolution.extension.carousel.min.js"></script>
+<script src="static/js/revolution.extension.kenburn.min.js"></script>
+<script src="static/js/revolution.extension.layeranimation.min.js"></script>
+<script src="static/js/revolution.extension.migration.min.js"></script>
+<script src="static/js/revolution.extension.migration.min.js"></script>
+<script src="static/js/revolution.extension.parallax.min.js"></script>
+<script src="static/js/revolution.extension.slideanims.min.js"></script>
+<script src="static/js/revolution.extension.video.min.js"></script>
+<script src="static/js/maps.min.js"></script>
+<!-- custom script -->
+<script src="static/js/script.js"></script>
+
+</body>
+</html>
